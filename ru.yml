@@ -1,0 +1,1501 @@
+ru:
+  number:
+    # Used in number_with_delimiter()
+    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: ","
+      # Delimits thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: "."
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 3
+      # If set to true, precision will mean the number of significant digits instead
+      # of the number of decimal digits (1234 with precision 2 becomes 1200, 1.23543 becomes 1.2)
+      significant: false
+      # If set, the zeros after the decimal separator will always be stripped (eg.: 1.200 will be 1.2)
+      strip_insignificant_zeros: false
+    # Used in number_to_currency()
+    currency:
+      format:
+        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
+        format: "%u %n"
+        unit: "€"
+        # These five are to override number.format and are optional
+        separator: ","
+        delimiter: "."
+        precision: 2
+        # do not translate this key (always in English true/false)
+        significant: false
+        # do not translate this key (always in English true/false)
+        strip_insignificant_zeros: false
+  time:
+    in_words:
+      today: 'Сегодня'
+      yesterday: 'Вчера'
+    formats:
+      short: "%d.%m.%Y"
+      time_only: "%I:%M%p"
+      long: "%d.%m.%Y, %I:%M%p"
+      invoice: "%B %-d, %Y"
+    am: "am"
+    pm: "pm"
+  date:
+    formats:
+      short: "%d.%m.%Y"
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+    day_names: [Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота]
+    month_names: [~, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
+    order:
+      - ":year"
+      - ":month"
+      - ":day"
+  application:
+    errors:
+      user_credits: "У вас недостаточно кредитов"
+      bodypart_field: "%{поле} не может быть пустым"
+      version_conflict: 'Конфликт версий'
+      device_limit_reached: 'Вы достигли лимита устройств, предусмотренного вашим тарифным планом'
+    required_explanation: Поля, отмеченные <abbr>*</abbr>, являются обязательными.
+    title: FotoFinder Hub
+    back: 'Назад'
+    close: 'Закрыть'
+    cancel: 'Отмена'
+    change: 'Изменить'
+    search: 'Поиск'
+    pagination:
+      show: 'Показать'
+      per_page: 'на странице'
+    male: Мужчина
+    female: Женский
+    download: Скачать
+    # The word "mutations" means changes? In Russian you can't say mutation of smthing unless it's a living organism
+    credit_mutations: История транзакций
+    beta: "В настоящее время это приложение находится в стадии Beta (%{link})"
+    what_does_this_mean: "что это значит?"
+    filter: "Фильтр"
+  shared:
+    credits: 'Кредиты / Планы'
+    credits_only: Кредиты
+    privacy_mode: 'Режим конфиденциальности'
+    privacy_mode_warning: 'ПРЕДУПРЕЖДЕНИЕ Вы находитесь в режиме конфиденциальности. При редактировании пациента имя пациента будет раскрыто'
+    second_opinion: 'Второе мнение'
+    credit_mutation: 'Изменения по кредитам'
+    select_all_images: 'Выберите все изображения'
+    overview: 'Обзор'
+    previous: 'Предыдущий'
+    next: 'Следующий'
+    datetime: 'Дата и время'
+    source: 'Источник'
+    yip: 'Да'
+    nop: 'Нет'
+    invalid: недействительный
+    add_comment: 'Ваш комментарий'
+    write_message: 'Написать сообщение'
+    message: 'Сообщение'
+    medical_history: 'История болезни'
+    select: 'Пожалуйста, выберите'
+    see_comment: См. комментарий
+    expert_group: 'Экспертная группа'
+    view_group_members: 'Просмотреть участников этой группы'
+    cost: 'Стоимость'
+    optional: 'дополнительно'
+    purchase_credits: "Кредиты на покупку"
+    case_id: "Case ID#: %{case_id}"
+    loading_text: Загрузка...
+    invoices: Счета-фактуры
+    back_home: Назад к дому
+    stripe_card_error: "Ваша карта была отклонена. Эта транзакция требует аутентификации."
+    private: частный
+    public: публичный
+    confirm_payment:
+      title: Еще один шаг
+      subtitle: Кредиты - оплата счёта
+      confirm_button: Подтвердить оплату
+      payment_confirmation_required: "Еще один шаг, нажмите кнопку <span class='font-bold'>„Подтвердить платеж“</span>, чтобы завершить процесс оплаты."
+      cc_last_digits_info: "Вы будете платить с помощью кредитной карты с последними 4 цифрами <strong>%{cc_last_digits}</strong> которая хранится у нас в профиле для вас."
+      info_cancel: "Вы также можете вернуться на <span class='font-bold'><a href='/doctor/credit_mutations'>страницу Кредитов и Планов</a></span>."
+      selected_package: "Вы выбрали пакет <strong>%{amount} кредитов</strong>, как показано в сводке ниже."
+    stripe_customer_not_found: "Клиент %{id} не найден в базе данных."
+    blocker_modal:
+      welcome: Добро пожаловать!
+      go_back_to_mobile_app: Вы успешно зарегистрировались.<br/>Вы можете закрыть эту страницу и вернуться в мобильное приложение.
+    save_block:
+      save: 'Сохранить'
+      send: 'Отправить'
+      export_to_pdf: 'Экспорт в PDF'
+      cancel: 'Отмена'
+      reset: 'Сброс'
+      ok: 'Хорошо'
+    credit_mutations:
+      hub2:
+        history:
+          spending_history: "История расходов"
+          earning_history: "История заработка"
+          credit_overview: "Обзор кредитов"
+      index:
+        successfully_register: Вы успешно зарегистрировались!
+        pop_up: Добро пожаловать!
+        plan_message_mobile: "Вашей учетной записи был назначен план <strong>'%{plan}'</strong>. Вы можете вернуться к приложению Handyscope и наслаждаться им. <br/><br/> P.S. Взгляните на нашу %{link}. Возможно, другой вариант подойдет вам больше."
+        plan_message: "Вашему счету был назначен план <strong>'%{plan}'</strong>. <br/><br/> P.S. Взгляните на нашу %{link}. Возможно, вам больше подойдет другой."
+        plans: планы
+    hub2:
+      admin_header:
+        user_edit: Редактировать пользователя
+        user_credit_mutations: Изменения по кредитам
+        user_plan_on_account: План на аккаунте
+        user_delete: Удалить пользователя
+      admin_expert_group_header:
+        detach_user: Удалить пользователя
+        user_details: Пользовательские данные
+        user_credit_mutations: Изменения по кредитам
+      doctor_navigation:
+        privacy_activated: "активен"
+        privacy_deactivated: "неактивен"
+        patients_overview: "Обзор пациентов"
+        second_opinion: "Второе мнение"
+        my_account: "Мой профиль"
+        devices: "Устройства"
+        support: "Поддержка"
+        logout: "Выход из системы"
+        plan: "Ваш план:"
+        group: "Ваша группа"
+        credits_plan: "Кредиты и планы"
+      non_doctor_panel:
+        logout: "Выход из системы"
+        my_account: "Мой аккаунт"
+        requests: "Запросы"
+        sent: "Отправлено"
+        credit_mutations: Изменения по кредитам
+      admin_navigation:
+        users: "Пользователи"
+        clinics: "Клиники"
+        fotofinder_groups: "Группы FotoFinder"
+        pages: "Страницы"
+        application_settings: "Настройки приложения"
+        auditlog: "Журнал аудита"
+        rcr: "Запрос на изменение региона"
+      patient_info:
+        confirm_delete: "Вы уверены, что хотите удалить текущего пациента?"
+        btn_delete: "Удалить"
+        skin_type: "Тип кожи"
+        skin_cancer: "Рак кожи"
+        moles_excised: "Иссечение родинок"
+      image:
+        second_opinion: "Второе мнение"
+        comment: "Комментарий"
+      second_opinion_result:
+        diagnosis: Диагноз
+        differential_diagnosis: Дифференциальная диагностика
+        suggestion: Предложение
+        comment: Комментарий
+        prev: Предыдущий
+        next: Следующий
+        of: из
+      second_opinion_details:
+        result_box_title: "Консультация эксперта по изучению"
+        group_of_experts: "Группа экспертов: %{expert_group}"
+      footer:
+        about: "О сайте"
+        privacy: "Конфиденциальность"
+        contact: "Контактная информация"
+        support: "Поддержка"
+        learn_more: "Узнать больше"
+        terms-of-service: "Условия предоставления услуг"
+      expert_navigation:
+        credits: "Кредиты"
+      expert_group_admin_navigation:
+        users: "Общие пользователи"
+      user_table:
+        first_name: Имя
+        last_name: Фамилия
+        role: Роль
+        plan: План
+        group: Группа
+        image_usage: Использование изображений
+        credits: Кредиты
+        last_sign_in_at: Последняя активность
+        status: Статус
+        invite: Приглашенные
+        not_accepted: Не принято
+        accepted: "принято %{date}"
+        registered: "Зарегистрированный %{date}"
+      rcr_table:
+        user_email: Электронная почта пользователя
+        creation_date_of_rcr: Дата создания
+        current_region: Текущий регион
+        destination_region: Регион назначения
+        last_update_of_rcr: Последнее обновление
+        current_status_of_rcr: Текущий статус
+      group:
+        info_credits: "20 кредитов / Второе мнение"
+        members: "%{count} Член(ы)"
+        btn_view_group: Смотреть группу
+        select_group: Выбрать
+        current_group: Текущая группа
+      second_opinion_detail_subheader:
+        ff_ai: FotoFinder AI
+        medical_history: История болезни
+        previous_irragularities_question: Были ли нарушения раньше?
+        yep: "да"
+        nop: "нет"
+        not_sure: не уверен
+        ai_score_request: "Запрос на оценку искусственного интеллекта:"
+        ai_score_result: "Результат:"
+        not_available: "Н/Д"
+    unselect_all_images: "Снять выделение со всех изображений"
+    select_one_photo: "Пожалуйста, выберите хотя бы одну фотографию!"
+    select_max_two_photos: "Пожалуйста, выберите не более 2 изображений!"
+    card_authorization_required:
+      title: "Требуется аутентификация вашей карты"
+      authenticate: "Аутентификация карты"
+    select_photo_explain: "Эти функции можно активировать только с выбранными изображениями."
+    per_request: "за запрос"
+    image: изображение
+    images: изображения
+  supports:
+    index:
+      header: Контактная поддержка
+    create:
+      header: Поддержка
+      accept_message: Ваше письмо было успешно отправлено в наш отдел поддержки. Мы будем работать над решением для вас как можно скорее.
+      thank_you: Спасибо, ваша команда центра FotoFinder
+  ai_score:
+    low: ИИ рассчитал низкий профиль риска для этого поражения.
+    medium: ИИ не может рассчитать четкий профиль риска для этого поражения.
+    high: ИИ рассчитал высокий профиль риска для этого поражения. Рекомендуется дальнейшее обследование в нашей службе второго мнения.
+    invalid: Недействительная оценка!
+    clinical_outclass_name: Название ауткласса - клиника, не может дать четкого описания оценки.
+    not_enough_credits: недостаточно кредитов для использования функции ai score
+    eligible: пользователь имеет возможность использовать функцию ai score
+  api:
+    images:
+      payment_required: Вы достигли лимита своего плана, пожалуйста, повысьте тарифный план, чтобы загрузить больше изображений.
+  pdf:
+    intro: "Один из членов нашей команды международных экспертов по раку кожи рассмотрел ваше дермоскопическое изображение для получения вторичного, независимого мнения. Это заключение основано на загруженном снимке и информации, и предоставляет вам рекомендации, необходимые для разработки эффективного плана лечения."
+    second_opinion_report: "Заключение второго мнения"
+  pricing_validation:
+    only_doctor: только врач имеет доступ к этой функции
+  errors:
+    helpers:
+      message: "Пожалуйста, проверьте следующие поля: %{attributes}."
+      words_connector: ", "
+      two_words_connector: " и "
+      last_word_connector: " и "
+    messages:
+      extension_whitelist_error: "%{extension} не разрешается, разрешенные типы: %{allowed_types}"
+      max_size_error: "должен быть меньше, чем %{max_size}"
+      blank_file: "Файл не может быть пустым"
+      not_found: "не найден"
+      already_confirmed: "уже подтвержден, пожалуйста, попробуйте войти в систему"
+      expert_limit: "Эта группа достигла лимита экспертов, вы не можете пригласить больше экспертов."
+      doctor_limit: "В этой группе достигнут лимит врачей, вы не можете больше приглашать врачей."
+      not_locked: "не был закрыт"
+      # Now, it's translated correctly. But the program shows it as untranslated
+      not_saved:
+        one: "1 ошибка не позволила сохранить этот %{resource}:"
+        few: ""
+        many: ""
+        other: "%{count} ошибок не позволили сохранить этот %{resource}:"
+  devise:
+    failure:
+      unconfirmed: 'Ваша учетная запись еще не подтверждена, пожалуйста, проверьте свой e-mail на наличие письма с подтверждением.'
+      locked: 'Ваш аккаунт заблокирован. Письмо отправлено с инструкциями по разблокировке.'
+      invalid: 'Неверный email или пароль.'
+      not_found_in_database: 'Неверный email или пароль.'
+      invalid_token: 'Неверный маркер аутентификации.'
+      timeout: 'Ваш сеанс истек, пожалуйста, войдите снова, чтобы продолжить.'
+      inactive: 'Ваш аккаунт не активен.'
+      # please keep it empty, for Devise (our authentication library)
+      unauthenticated: ''
+      confirm_failed: 'Подтверждение не удалось. Ваша учетная запись уже подтверждена или ключ подтверждения недействителен.'
+    sessions:
+      blocked: 'Ваш аккаунт был заблокирован'
+      introduction: 'Введите свой адрес электронной почты и пароль, чтобы получить доступ к FotoFinder Hub.'
+      sign_in: 'Войти'
+      forgot_password: 'Забыли пароль?'
+      no_account_yet: "У вас еще нет аккаунта?"
+      sign_up_here: 'Зарегистрируйтесь здесь'
+      to_get_started: 'для начала работы'
+      sign_out: 'Выход из системы'
+      new:
+        headline_1: "Ваша гибкая и мощная платформа"
+        headline_2: "для мобильной дермоскопии!"
+        placeholder_email: "Адрес электронной почты"
+        placholder_password: "Пароль"
+        # please don't translate the HTML classes inside <span> tag
+        # please also check if any HTML tags or classes are translated (they should not)
+        sign_to_account: "<span class='font-bold underline'>Войдите</span> в свою учетную запись FotoFinder"
+      create:
+        headline: "Двухфакторная аутентификация"
+        box_title: "Код аутентификации"
+        placeholder: "Ваш код аутентификации"
+        verify_code: "Проверить код"
+        info_text: "Откройте приложение двухфакторной аутентификации на своем устройстве, чтобы просмотреть код аутентификации и подтвердить свою личность."
+    confirmations:
+      send_instructions: 'Через несколько минут вы получите электронное письмо с инструкциями по подтверждению учетной записи.'
+      confirmed: 'Ваша учетная запись была успешно подтверждена. Теперь вы можете войти в систему.'
+      confirm_failed: 'Подтверждение не удалось. Ваша учетная запись уже подтверждена или ключ подтверждения недействителен.'
+    registrations:
+      beta: "Данный веб-сайт был выпущен в бета-версии. Использование этого сайта бесплатно до окончания периода бета-версии."
+      fotofinder_identity: 'FotoFinder профиль'
+      personal_information: 'Личная информация'
+      contact_information: 'Контактная информация'
+      security_check: 'Проверка безопасности'
+      tos: 'Условия соглашения о предоставлении услуг'
+      valid_license: 'Действительная лицензия'
+      valid_license_notice: 'Примечание: Услугами FotoFinder Second Opinion могут пользоваться только врачи. Вы обязаны предоставить соответствующее доказательство по запросу.'
+      register: 'Зарегистрироваться'
+      signed_up: 'Добро пожаловать! Вы успешно зарегистрировались. Мы отправили подтверждение по электронной почте, пожалуйста, нажмите на ссылку в нем для подтверждения вашей учетной записи'
+      inactive_signed_up: 'Вы успешно зарегистрировались. Однако мы не смогли зарегистрировать вас, потому что ваша учетная запись %{reason}.'
+      updated: 'Вы успешно обновили свою учетную запись.'
+      destroyed: 'До встречи! Ваш аккаунт был успешно аннулирован. Мы надеемся увидеть вас снова в ближайшее время.'
+      group: Группа FotoFinder
+      clinic: "Клиника"
+      expert_information: Экспертная информация
+      company_information: Информация о компании
+      edit_expert_information: Редактирование информации об эксперте
+      edit_company_information: Редактировать информацию о компании
+      edit_personal_information: Редактировать личную информацию
+      user:
+        confirm: Вы получили электронное письмо для подтверждения вашей учетной записи. После подтверждения вы можете войти в систему.
+      sign_up: "Зарегистрируйтесь"
+      create_account: "Создайте свой аккаунт"
+      login: "войти"
+      or: "или"
+      # please do not translate the HTML classes
+      recaptcha_text: "Эта страница защищена reCAPTCHA и подпадает под действие <span class='mr-1 underline'>Политики конфиденциальности</span> Google и"
+    unlocks:
+      send_instructions: 'В течение нескольких минут вы получите электронное письмо с инструкциями по разблокировке вашего счета.'
+      unlocked: 'Ваша учетная запись была успешно разблокирована. Теперь вы вошли в систему.'
+    omniauth_callbacks:
+      success: 'Успешная авторизация со счета %{kind}.'
+      failure: 'Не удалось авторизовать вас от %{kind} по причине "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Инструкции по подтверждению'
+      reset_password_instructions:
+        subject: 'Инструкции по сбросу пароля'
+      unlock_instructions:
+        subject: 'Инструкции по разблокировке'
+    passwords:
+      user:
+        send_instructions: "Через несколько минут вы получите электронное письмо с инструкциями по сбросу пароля."
+  passwords:
+    new:
+      forgot_password: 'Забыли пароль?'
+      forgot_password_submit: 'Отправить инструкции'
+      login_back: Вернуться к разделу Вход
+    edit:
+      change_password: 'Изменить пароль'
+      change_password_submit: 'Изменить мой пароль'
+    send_instructions: 'Через несколько минут вы получите электронное письмо с инструкциями по сбросу пароля.'
+    updated: 'Ваш пароль был успешно изменен. Теперь вы вошли в систему.'
+    update:
+      new_password: 'Новый пароль'
+      retype_password: 'Повторный ввод пароля'
+      warning: Все связанные устройства будут отключены после обновления пароля
+    strength:
+      strength1: 'Слишком слабый'
+      strength2: 'Слабый'
+      strength3: 'Нормальный'
+      strength4: 'Сильный'
+      strength5: 'Очень сильный'
+    validity:
+      ok: 'Хорошо!'
+      error: 'Ошибка'
+      not_match: 'Нет совпадений!'
+      too_short: 'Слишком короткий!'
+  mongoid:
+    errors:
+      models:
+        user:
+          attributes:
+            base:
+              captcha: 'Проверка безопасности, которую вы заполнили, была неверной.'
+            email:
+              blank: "не может быть пустым"
+              invalid: "недействителен"
+              taken: "занят"
+            first_name:
+              blank: "не может быть пустым"
+            last_name:
+              blank: "не может быть пустым"
+            vat_nr:
+              blank: "не может быть пустым"
+        patient:
+          attributes:
+            first_name:
+              no_number: "Имя и фамилия не могут содержать цифр"
+              blank: "не может быть пустым"
+            last_name:
+              no_number: "Фамилия не может содержать цифр"
+              blank: "не может быть пустым"
+            patient_id:
+              taken: "занят"
+    attributes:
+      user:
+        name: Имя
+        email: Адрес электронной почты
+        password: Новый пароль
+        password_confirmation: Повторный ввод пароля
+        current_password: Старый пароль
+        time_zone: Часовой пояс
+        last_name: Фамилия
+        first_name: Имя
+        middle_name: Среднее имя
+        date_of_birth: Дата рождения
+        sex: Пол
+        company: Компания / Практика
+        country: Страна
+        street: Адрес улицы
+        city: Город
+        state: Область
+        zip_code: Почтовый индекс
+        patient_id: ID пациента
+        phone: Номер телефона
+        vat_nr: "НДС №"
+        short_description: Краткое описание
+        work_history: История работы
+        experience: Опыт
+        avatar: Аватар
+        logo: Логотип
+        report_header1: Заголовок отчета 1
+        report_header2: Заголовок отчета 2
+        report_header3: Заголовок отчета 3
+        report_header4: Заголовок отчета 4
+        report_header5: Заголовок отчета 5
+      second_opinion:
+        previous_irragularities: 'Были ли нарушения раньше?'
+      image_base:
+        file: "Файл"
+  user:
+    email: 'Адрес электронной почты'
+    password: 'Пароль'
+    password_confirmation: 'Подтверждение пароля'
+    accept: 'Я принимаю'
+    terms: 'Условия предоставления услуг'
+    valid_license: 'Настоящим я заявляю, что являюсь врачом с действующей лицензией на практику в моем штате/стране в соответствии с действующим законодательством'
+    incorrect_password: 'Пароль неверный, попробуйте еще раз'
+    invalid_dob: не может быть в будущем
+  credit_mutations:
+    current_credits: "Текущий баланс <strong>%{amount}</strong> Кредиты"
+    search: "отправитель, получатель или комментарий"
+    date: "Дата"
+    from_to: "Отправитель / Получатель"
+    from: "Отправитель"
+    to: "Получатель"
+    comment: "Комментарий/устройство"
+    amount: "Сумма"
+    filter_on: "Фильтр на"
+    reset: "сброс"
+    total: "Всего"
+    progress_bar:
+      image: изображение(и)
+      images: изображения
+  doctor:
+    credit_purchases:
+      success:
+        title: Пополняйте кредиты
+        second_title: Покупка завершена
+        explanation: "<span class='text-4xl font-semibold'>%{amount} Кредиты</span> <br>были зачислены на ваш счет."
+        back_to_overview: Вернуться на страницу "Кредитов и планов"
+      create:
+        title: Пополняйте кредиты
+        selected_package: "Вы выбрали пакет <strong>%{amount} кредитов</strong>, как показано в сводке ниже."
+        info_cancel: "Вы также можете вернуться на <span class='font-bold'><a href='/doctor/credit_mutations'>страницу обзора кредитов</a></span>."
+        box_title: "Кредиты - обзор платежей"
+        info_text_1: "Для подтверждения заказа нажмите кнопку <span class='font-bold'>„Произвести оплату“</span>, чтобы продолжить процесс оплаты."
+        info_text_2: "Вы будете платить с помощью кредитной карты с последними 4 цифрами <strong>%{cc_last_digits}</strong>, которая хранится у нас в профиле для вас."
+        button_title: "Произвести оплату"
+        per_credit: "за кредит"
+    subscriptions:
+      plan:
+        multiple: "Несколько устройств"
+        current_plan: "Текущий план"
+        free: "Бесплатно"
+        incl_vat: "вкл. НДС"
+        price_per_month: "%{price_per_month} / месяц"
+        patient_manage: "Управление пациентами"
+        report_printing: "Печать отчета"
+        second_opinion: "Служба второго мнения"
+        devices: "%{device} Устройства"
+        image_omparison: "Сравнение изображений"
+        upload_local: "Загрузка локальных изображений"
+        personalized_printing: "Персонализированная печать"
+        trichoscale: "Прямой доступ из FotoFinder Trichoscale для анализа волос *."
+        sign_up_to_plan: "Подпишитесь на план"
+        storage_space: "%{storage_space} места для хранения"
+        coupon_not_valid: не действует для этого плана.
+        unknown_coupon: Неизвестный купон, пожалуйста, попробуйте еще раз
+        successful_subscription: Вы успешно подписались на план %{plan_name}, спасибо!
+      signup_plan:
+        confirm_header: "Подпишитесь на план <span class='font-bold'>%{plan_name}</span>"
+        confirm_text: "Нажмите <span class='font-semibold underline'>подтвердить</span> ниже, чтобы выбрать план %{plan_name}."
+        free: "Бесплатно"
+        price_per_month: "%{price_per_month} / месяц"
+        incl_vat: "вкл. НДС"
+        plan_voucher: "Плановый ваучер"
+        enter_code: "Введите код активации:"
+        info_text1: "Для подтверждения вашего плана необходима кредитная карта."
+        info_text2: "Обратите внимание, что средства с вашей кредитной карты будут списаны только после истечения срока действия ваучера или скидки."
+        cancel: "Отмена"
+        confirm: "Подтвердить"
+        warning: "Внимание!"
+        over_limit_warning: "Фактическое хранилище вашего аккаунта превышает лимиты назначенного Плана. Вы не сможете работать с этим Планом, пока не уменьшите объем хранилища."
+        over_limit_warning_count: "Фактическое количество изображений в вашем аккаунте превышает лимиты назначенного Плана. Вы не сможете работать с этим Планом, пока не уменьшите количество изображений."
+      mobile_signup_plan:
+        titlel: "Подпишитесь на план"
+        free: "Бесплатно"
+        price_per_month: "%{price_per_month} / месяц"
+        incl_vat: "вкл. НДС"
+        plan_voucher: "Плановый ваучер"
+        enter_code: "Введите код активации:"
+        info_text1: "Для подтверждения вашего плана необходима кредитная карта."
+        info_text2: "Обратите внимание, что средства с вашей кредитной карты будут списаны только после истечения срока действия ваучера или скидки."
+        cancel: "Отмена"
+        confirm: "Подтвердить"
+    credit_mutations:
+      index:
+        title: Кредиты и планы
+        offer_title: "Подходящее предложение для каждого"
+        over_limit_warning: "Фактический размер вашей учетной записи превышает ограничения данного Плана. Вы не сможете работать с этим Планом, пока не уменьшите количество изображений. Вы можете перейти на следующий размер Плана, чтобы уменьшить количество хранимых изображений, и понизить его после этого в любое время!"
+        invalid_plan_warning: "Hub обнаружил проблему в вашем плане. Пожалуйста, свяжитесь с нашей службой поддержки."
+        trichoscale_explanation: "* FotoFinder Trichoscale - это локальное программное обеспечение, которое необходимо приобретать отдельно."
+      private_group_box:
+        private_group: "Частная группа"
+        private_group_text: "Информация о вашей частной группе"
+        group_name: "Имя"
+        admin_name: "Имя администратора"
+        admin_email: "Электронная почта администратора"
+        private_group_info-text-1: "Вы являетесь частью частной группы, которая централизованно управляет финансовыми операциями."
+        private_group_info-text-2: "Все финансовые вопросы следует обсуждать с администратором."
+      add_creditcard_box:
+        credit_card: "Кредитная карта"
+        no_card: "Нет карты в личном деле"
+        add_credit_card: "Добавить кредитную карту"
+        no_card_text: "В настоящее время у нас <span class='font-bold'>нет</span> кредитной карты на ваше имя."
+      edit_card:
+        title: "Добавить кредитную карту"
+        box_title: "Ваша кредитная карточка"
+        info_text_1: "Вся информация о кредитной карте надежно хранится у нашего провайдера платежей"
+        info_text_2: "Мы не храним данные кредитных карт на наших серверах."
+        info_text_3: "Я уполномочиваю компанию FotoFinder Systems GmbH направлять инструкции финансовому учреждению, выпустившему мою карту, для получения платежей с моего счета в соответствии с условиями моего соглашения с вами."
+        cardholder_name: "Имя владельца карты"
+        card_type: "Кредитная или дебетовая карта"
+        button_title: "Сохранить карту"
+        success_msg: "Кредитная карта успешно добавлена!"
+        name_empty_error: "Вы должны ввести имя владельца карты"
+        subscription_changed: "Поскольку ваша <u>информация о подписке</u> изменилась, вам необходимо обновить информацию об оплате."
+      creditcard_box:
+        credit_card: "Кредитная карта"
+        has_card: "Ваша карточка в личном деле"
+        card_holder: "Владелец карты"
+        card_number: "Номер карты"
+        card_expdate: "Срок действия"
+        info-text-1: "У нас есть файл для текущей кредитной карты."
+        info-text-2: "если вы хотите удалить все карты, которые хранятся у нас."
+        click_here: "Нажмите здесь"
+        confirm_msg: "Вы уверены, что хотите удалить свою карту?"
+        change_card: "Изменить кредитную карту"
+        delete_card: "Удалить кредитную карту"
+        cancel: Отмена
+      choose_plan:
+        title: "Кредиты и планы"
+        subtitle: "Выберите свой план"
+      mobile_index:
+        title: "Добро пожаловать"
+        subtitle: "Ваш план активирован"
+        info_text: "Вы можете начать прямо сейчас, используя FotoFinder Hub и приложение handyscope pro."
+      mobile_index2:
+        title: "Кредиты и планы"
+      creditpack_voucher:
+        pack_voucher: "Ваучер на кредиты"
+        enter_code: "Введите код активации"
+        activate: "Активировать"
+      plans_box:
+        btn_change_plan: "Изменить план"
+        info_text1: "Отмена в любое время"
+        info_text2: "Без ежегодных обязательств"
+        info_text3: "Приобретите дополнительные кредиты для использования AI-Score и Второго мнения"
+        next_payment: "Следующий платеж запланирован на"
+        show_invoices: "Показать счета-фактуры"
+        cancel_plan: "Отменить план"
+        choose_plan: "Выберите план"
+        title: "Планы"
+        subtitle: "Ваш текущий план"
+        per_day: "/ день"
+        per_month: "/ месяц"
+        per_year: "/ год"
+        cancel_plan_title: "Пожалуйста, сообщите нам причину отмены вашего плана"
+        cancel_plan_btn: "Отменить план"
+        continue_plan_btn: "Продолжить план"
+        cancel_reason_1: "Продукт слишком дорогой"
+        cancel_reason_2: "Мне не хватает важной для меня функции"
+        cancel_reason_3: "У меня технические трудности"
+        cancel_reason_4: "Я больше не использую этот продукт"
+        cancel_reason_5: "Я хочу другой продукт или вид"
+        cancel_reason_6: "Другая причина"
+      mobile_choose_plan:
+        title: "Кредиты и планы"
+        subtitle: "Выберите свой план"
+      credit_packs_box:
+        title: "Кредит-паки"
+        subtitle: "Пополняйте кредиты"
+        credits: "Кредитов"
+      invoices:
+        payment_history: "История платежей"
+        credit_overview: "Обзор"
+        date: "Дата"
+        products: "Продукт(ы)"
+        amount: "Сумма"
+        receipt: "Квитанция"
+        inc_vat: "Вкл. НДС"
+        stripe_pdf: "Stripe PDF"
+    patients:
+      edit: 'Редактировать пациента'
+      invalid_age: не может быть 0 лет
+      index:
+        new: 'Добавить нового пациента'
+        patients: 'пациентов'
+        list_title: 'Пациенты'
+        last_name: 'Фамилия'
+        date_of_birth: 'Дата рождения'
+        first_name: 'Имя'
+        last_session: 'Последняя сессия'
+        search_bar_placeholder: "Пожалуйста, введите имя, ID, дату рождения или электронную почту"
+      form:
+        personal: "Личная"
+        contact: "Контактная"
+        medical: "Медицинская"
+        information: "Информация"
+        patient_id: "ID пациента"
+        patient_id_info: "*ID пациента генерируется автоматически."
+        first_name: "Имя"
+        study: "Исследование"
+        street_address: "Адрес улицы"
+        city: "Город"
+        zip_code: "Почтовый индекс"
+        state: "Область"
+        country: "Страна"
+        email: "Электронная почта"
+        phone: "Телефон"
+        radio_yes: "Да"
+        radio_no: "Нет"
+        family_background: "Семейное прошлое"
+        skin_cancer: "Рак кожи"
+        clear: "Очистить"
+        dob: "Дата рождения"
+        body_height: "Рост"
+        last_name: "Фамилия"
+      edit_patient_data: 'Редактирование данных пациента'
+      delete_patient: 'Удалить пациента'
+      welcome:
+        new_patient: "Добавление нового пациента"
+    consultations:
+      consultation_image:
+        title: "сессия от "
+      new: "Загрузить фотографии"
+      session: "Сессия %{session_number}"
+      consultation:
+        see_more: "См. подробнее ..."
+      index:
+        delete_images: "Удалить изображение(я)"
+        delete: "Удалить"
+        sure: 'Вы уверены, что хотите удалить выбранный'
+        sure_2: 'с этой сессии?'
+        btn_sort_consultation: "Сортировать по консультациям"
+        btn_consultation_location: "Сортировать по метке местоположения"
+        btn_download_pdf: "Печать отчета (PDF)"
+        request_so: Запросить второе мнение
+      upload_photos:
+        upload_photos: "Загрузить фотографии"
+        upload_photos_explanation: "Удерживайте клавишу cmd (macOS) или ctrl (windows) для выбора нескольких файлов. В зависимости от размера файла загрузка фотографий может занять некоторое время. Не закрывайте это диалоговое окно!"
+        photos: "Выберите фотографии:"
+      upload_images:
+        over_limit_warning: "Вы не можете загрузить эти изображения! Ваш остаток памяти составляет %{limit} МБ"
+        over_limit_warning_count: "Вы не можете загрузить эти изображения! В вашем хранилище осталось %{limit} изображения(й)."
+      image_compare:
+        btn_image_compare: "Сравнение изображений"
+      compare_menu:
+        btn_close: "Закрыть"
+        btn_previous: "Предыдущий"
+        btn_next: "Следующий"
+        btn_zoom_in: "Увеличить"
+        btn_zoom_out: "Уменьшить масштаб"
+        # we put number in between from javascript 'Image from_js of from_js'
+        image_of1: Изображение
+        image_of2: из
+      num_of_images: "%{image_count} Изображения"
+    images:
+      index:
+        delete_images: 'Удалить изображение(я)'
+        delete: 'Удалить'
+        sure: 'Вы уверены, что хотите удалить выбранные'
+        sure_2: 'с этой сессии?'
+        btn_sort_consultation: "Сортировать по консультациям"
+        btn_consultation_location: "Сортировать по метке местоположения"
+        btn_download_pdf: "Печать отчета (PDF)"
+      image_compare:
+        btn_image_compare: "Сравнение изображений"
+    consultation_images:
+      form:
+        save_comment: 'Сохранить'
+        title: "Добавить комментарий"
+        manual: 'Загруженное вручную изображение'
+        btn_report: "Отчет (PDF)"
+        second_opinion: "Второе мнение"
+        histological: "Гистологические результаты"
+        upload_histological: "Загрузить гистологический отчет"
+        btn_request: "Запросить второе мнение"
+      show:
+        ai_score: Получить оценку искусственного интеллекта
+        modal:
+          title: FotoFinder AI Score
+          out_of_credits: Кредиты закончились
+          get_score: Получить оценку искусственного интеллекта
+          credit_balance: Текущий кредитный баланс
+          charged: С вас будет взыскана следующая сумма
+          credits: Кредит(ы)
+          top_up: Пополните свои кредиты или активируйте ваучер на бесплатный кредит в разделе Кредиты/План.
+          credits_plan_link: Кредиты/План
+          disactivated: Извините! Эта функция для вас отключена
+      ai_score:
+        modal:
+          ai_score: Оценка ИИ
+          text_result: Результаты основаны на статистике. Диагноз может быть поставлен только врачом
+      confirm:
+        confirm_second_opinion_exists:
+          title: "Для этого изображения существует второе мнение"
+          description: "Для этого изображения уже есть второе мнение или запрос на второе мнение! Пожалуйста, проверьте свой почтовый ящик! Хотите ли вы снова запросить второе мнение по этому изображению?"
+          multiple_images_title: "Второе мнение существует для одного или нескольких из этих изображений"
+          multiple_images_desc: "Одно или несколько изображений уже имеют второе мнение или ожидают запроса на второе мнение! Пожалуйста, проверьте свой почтовый ящик! Хотите ли вы снова запросить второе мнение по этим изображениям?"
+        delete_title: "Удалить изображение"
+        delete_confirm: "Вы уверены, что хотите удалить это изображение?"
+        btn_delete: "Удалить"
+      header:
+        image: "Изображение %{count}"
+        of: "из %{count}"
+        title: "Сессия"
+        btn_overview: "Обзор"
+        btn_previous: "Предыдущий"
+        btn_next: "Следующий"
+        btn_delete: "Удалить изображение"
+      gallery:
+        title: "Другие изображения в:"
+        image: "Изображение %{count}"
+        of: "из %{count}"
+    second_opinions:
+      form:
+        previous_irragularities: "Были ли нарушения раньше?"
+        marker_info: Информация о метке
+        write_marker: Опишите данные метки
+        change: Сменить группу
+        previous: Предыдущий
+        next: Следующий
+        img_details: Детали изображения
+        so_details: Второе мнение Подробнее
+        send_request: "Отправить запрос"
+        total_credit_html: "Общая сумма кредита за это Второе мнение составляет <b> %{total} кредитов</b>, которые будут вычтены из вашего кредитного баланса."
+        source: "Источник"
+        date_and_time: "Дата и время"
+      index:
+        error_group: 'Услуга второго мнения временно недоступна для этой группы!'
+        patients: 'пациенты'
+        title: 'Служба второго мнения'
+        sex: 'Пол'
+        id: 'ID'
+        last_name: 'Фамилия'
+        date_of_birth: 'Дата рождения'
+        first_name: 'Имя'
+        received_at: 'Получено'
+        created_at: 'Запрошено'
+        info_line_1: "Всемирно известные специалисты по раку кожи обеспечат Вам наилучшее качество диагностики."
+        info_line_2: "Вы получите уведомление по электронной почте, как только рейтинг будет доступен. Отчет автоматически возвращается в ваш FotoFinder Hub"
+        info_line_3: "аккаунт и может быть загружен в формате PDF."
+        inbox: "Входящие"
+        pending: "В ожидании"
+        count: "%{count}"
+        state: "Статус"
+        group_of_experts: "Группа экспертов"
+        group_member: Участника(ов)
+        btn_view_group: "Смотреть группу"
+        btn_change_group: "Сменить группу"
+        credits_per_request: "%{amount} Кредиты / Второе мнение"
+      show:
+        received_from: "Получено %{date}, %{time} от %{from}"
+        title: "Служба второго мнения"
+        btn_overview: "Обзор входящих сообщений"
+        btn_download_pdf: "Печать отчета (PDF)"
+        other_images: "Начать запрос нескольких изображений."
+        further_cost: "Дополнительная стоимость"
+      pdf:
+        received_from: "Получено %{date}, %{time} от %{from}"
+        rating_expert: "Эксперт по рейтингу для этой фотографии:"
+      expert_group_member:
+        title: "Участники экспертной группы"
+        group_of_experts: "Группа экспертов"
+        credits: "Кредиты / Второе мнение"
+        member: "Участника(ов)"
+        read_more: "читать далее"
+        specialities: "Специальности"
+        work_history: "История работы"
+        members_counter: "Член %{index} из %{counts}"
+        expert_group: "Экспертная группа"
+      expert_group_list:
+        info_line4_html: Пожалуйста, выберите свою <span class="font-semibold">Группу экспертов</span> для использования Нашей услуги.
+        groups: Группы
+      spinner_and_done:
+        new:
+          requesting: 'Запрос второго мнения'
+          uploading: 'Загрузка и безопасная передача ваших изображений и информации...'
+          request_succesfull: 'Запрос успешен'
+          processed: 'Ваш запрос был обработан, и в ближайшее время вы получите ответ от эксперта.'
+    linked_devices:
+      title: "Устройства и браузеры"
+      listed_devices: "Устройства и браузеры, в которых вы вошли в систему, перечислены ниже."
+      unfamiliar_devices: "Если вы видите незнакомые устройства, нажмите \"Отключить\", а затем измените пароль."
+      unfamiliar_devices_link: "Если вы видите незнакомые устройства, нажмите \"Отключить\" из %{link}, а затем измените пароль."
+      my_devices: "Мои устройства"
+      index:
+        intro_bold: "Это устройства, которые в настоящее время связаны с FotoFinder Hub."
+        intro: "Устройство имеет доступ к учетной записи FotoFinder Hub только в том случае, если установлен соответствующий флажок \"Разрешение доступа\"! Вы можете отозвать доступ для устройства, сняв флажок или полностью отвязав устройство."
+        linked_devices: 'Связанные устройства'
+        last_activity: 'Последняя активность'
+        authorize: 'Разрешение доступа'
+        sure: 'Вы уверены, что хотите отвязать это устройство?'
+        unlink: 'Отвязать'
+        history: "История"
+        modal_unlink: "Отвязать устройство"
+        modal_cancel: "Отмена"
+        device_id: "ID устройства:"
+      history:
+        title: "История связанных устройств"
+        intro_bold: "Это устройства, которые ранее были связаны с FotoFinder Hub."
+        intro: "Он показывает последнее действие и его дату/время для каждого устройства. Если есть подозрительные действия с 'Войти', вы можете отозвать доступ или отвязать устройство в %{link}."
+        device_id: "ID устройства:"
+        datetime: "Дата/время"
+        sign_in: "Подписано"
+        sign_out: "Подписано"
+        devices: "устройства"
+    coupons:
+      create:
+        voucher_used: "Ваш ваучер уже использован!"
+        voucher_activated: "Ваш ваучер был успешно активирован!"
+        voucher_wrong: "Ваш код активации ваучера был неверным!"
+    dashboard:
+      index:
+        title: "Добро пожаловать, %{initial_name}"
+        search_bar_text1: "Ищите пациента?"
+        search_bar_text2: "Пожалуйста, воспользуйтесь строкой поиска, чтобы найти необходимые данные пациентов."
+        search_bar_btn: "Поиск пациента"
+        patients_overview: "Обзор пациентов"
+        new_patient: "Новый пациент"
+        second_opinion: "Второе мнение"
+        credits_plan: "Кредиты / План"
+        search_bar_placeholder: "Пожалуйста, введите имя, ID, дату рождения или электронную почту"
+      search_suggest:
+        search_bar_btn: "Поиск пациента"
+    invoice_past_due:
+      index:
+        text_line1: "В настоящее время вы не можете использовать FotoFinder Hub, потому что ваш счет-фактура Stripe <b>#%{number}</b> просрочен с %{created}."
+        text_line2: "Пожалуйста, выберите один из следующих вариантов:"
+        pay_invoice: "Оплатить счет сейчас"
+        download_invoice: "Скачать счет-фактуру PDF"
+        downgrade_trial: "Понижение статуса до пробного"
+        logout: "Выход из системы"
+        confirm_title: "Понижение подписки с %{plan_name} до пробной"
+        confirm_text: "После понижения статуса до Trial вы должны связаться с компанией FotoFinder Systems, чтобы продолжить подписку на %{plan_name}."
+        downgrade: "Понижение рейтинга"
+        cancel: "Отмена"
+  group:
+    name: Имя
+    region: Регион
+    language: "Язык"
+    slug: "Ссылки"
+  credit_mutation:
+    payback: 'Возврат средств за второе мнение от %{from}, (%{image_count} недостаточное количество изображений)'
+    reserve_credits: 'Кредиты, зарезервированные на ожидание второго мнения'
+    transfered_to_system: 'Собранные системой для выплаты'
+    ai_score: 'Запрос AI Score с %{device}'
+    no_device_ai_score: 'Запрос на оценку искусственного интеллекта, собранный системой'
+    reserved: 'Зарезервировано для второго мнения'
+    transfered: "Второе мнение от %{to} (%{image_count} изображений)"
+    transfer_purchase_to_user: "Покупка кредитов"
+    per_credit: "%{price} / кредит"
+    buy_now: Купить сейчас
+    hub_space: "Fotofinder Hub Space"
+    hub_space_capacity: "%{capacity} Fotofinder Hub Space"
+    over_used_capacity: "%{over_used_capacity} Избыточное использование"
+    credit_card_added: "Кредитная карта успешно добавлена, теперь вы можете выбрать тарифный план"
+    credit_card_added_mobile: "Кредитная карта успешно добавлена, теперь вы можете выбрать тарифный план или купить кредиты"
+    payment_not_processed: "Наш платежный процессор не смог обработать вашу карту."
+  second_opinion:
+    not_enough_credits:
+      title: "Недостаточное количество кредитов"
+      description: "В настоящее время на вашем счету недостаточно кредитов для запроса второго мнения. На ваш текущий запрос потрачено %{total} кредитов."
+    image:
+      diagnosis: "Диагноз:"
+      differential_diagnosis: "Дифференциальный диагноз:"
+      suggestion: "Предложение:"
+      comment: "Комментарий:"
+      empty: 'Н/Д'
+      insufficient_message: Изображение недостаточно для постановки диагноза
+    insufficient_explanation: '*Если вы отметили изображение как недостаточное, комментарий обязателен.'
+    medical_history: История болезни
+    pending:
+      status: В ожидании
+      expert: "Н/Д"
+    request: 'Запрос на второе мнение'
+    marker_info: Информация о метке
+    irragularity_options:
+      pos: 'Да'
+      neg: 'Нет'
+      not_sure: 'Не уверен'
+    open: Открыть
+    locked: Заблокировано
+    diagnosis:
+      angioma: Ангиома
+      atypical_nevus: Атипичный невус
+      benign_nevus: Доброкачественный невус
+      dermatofibroma_histiocytoma: Дерматофиброма
+      dysplastic_nevus: Диспластический невус
+      sebaceous_hyperplasia: Гиперплазия сальных желез
+      seborrhoic_ceratosis: Себорейный кератоз
+      solar_ceratosis: Актинический кератоз
+      solar_lentigo: Актиническое лентиго
+      basal_cell_carcinoma: Базальноклеточная карцинома
+      invasive_melanoma: Инвазивная меланома
+      superficial_melanoma: Поверхностная меланома
+      melanoma_in_situ: Меланома ин ситу
+      morbus_bowen: Морбус Боуэн
+      squamous_cell_carcinoma: Сквамозно-клеточная карцинома
+      # These are obsolete
+      suspected_melanoma_in_situ: Подозреваемая меланома ин ситу
+      suspected_invasive_melanoma: подозрение на инвазивную меланому
+      suspected_basal_cell_carcinoma: подозрение на базальноклеточную карциному
+      suspected_solar_ceratosis: подозрение на солнечный цератоз
+      suspected_morbus_bowen: подозревается Морбус Боуэн
+      suspected_squamous_cell_carcinoma: подозрение на плоскоклеточную карциному
+    suggestions:
+      no_action: Никаких действий не требуется
+      follow_up_in_3_months: Последующее наблюдение через 3 месяца
+      follow_up_in_6_months: Последующее наблюдение через 6 месяцев
+      annual_follow_up: Ежегодное наблюдение
+      diagnostic_excision: Диагностическая эксцизия
+      shave_biopsy: Бритвенная биопсия
+      punch_biopsy: Пункционная биопсия
+      cryotherapy: Криотерапия
+      tropical_treatment: Местное лечение
+      urgent_referral_to_dermatologist: Срочное направление к дерматологу
+      routine_referral_to_dermatologist: Обычное направление к дерматологу
+      see_comment: См. комментарий
+    pricing_validation:
+      not_enough_credits: недостаточно кредитов для использования функции второго мнения
+      eligible: пользователь имеет возможность использовать функцию второго мнения
+  expert:
+    second_opinions:
+      index:
+        title: Запросы на второе мнение
+        from: с
+        image_count: '№ изображений'
+        status: статус
+        created_at: полученный в
+        requests: запросы
+        credits: кредиты
+        error: 'Это второе мнение было получено кем-то другим. Попробуйте другое.'
+      edit:
+        source_name: Имя устройства
+        lightbox_enter_password: Пожалуйста, введите пароль
+        lightbox_sign_report: "подписать ваш отчет:"
+        comment: "Комментарий"
+        next: Следующий
+        of: из
+        prev: Предыдущий
+      sent:
+        title: Отправлено второе мнение
+        image_count: '№ изображений'
+        sent_at: отправлено
+        requests: запросы
+        to: к
+        finished: Это второе мнение уже закрыто, редактирование запрещено!
+        credits: кредиты
+      show:
+        btn_download_pdf: "Печать отчета (PDF)"
+        other_images: Другие изображения в этом
+        request: Запрос
+      pdf:
+        received_from: "Получено %{date}, %{time} от %{from}"
+        rating_expert: "Эксперт по рейтингу для этой фотографии:"
+    credit_mutations:
+      index:
+        title: Кредиты
+        credit: "Кредиты"
+        current_balance: "Текущий баланс"
+  my_account:
+    header: Мой счет
+    edit_header: Редактировать мой аккаунт
+    print_settings: Настройки печати
+    change_print_settings: Изменение настроек печати
+    edit_print_settings: Редактирование параметров печати
+    custom_pdf: Пользовательские заголовки отчетов PDF
+    remove_logo: Удалить логотип
+    delete:
+      button: Удалить свою учетную запись
+      title: "Удаление учетной записи"
+      password_confirmation_title: "Вы действительно хотите удалить его?"
+      confirm_1: "<strong>Внимание: </strong> Эта функция удалит вашу учетную запись и сотрет все данные навсегда. Этот процесс не может быть восстановлен позднее!"
+      confirm_2: "<strong>Внимание: </strong> Эта функция удалит вашу учетную запись и сотрет все данные навсегда. Этот процесс не может быть восстановлен позднее!"
+      confirm_3: "Вы уверены, что хотите продолжить? Все данные и изображения будут удалены навсегда!"
+      delete: Удалить
+      confirm: Удалить
+      cancel: Вернись
+      confirm_title: "Ваш аккаунт был удален"
+      support_message: "Ваш аккаунт удален. Все файлы и данные учетной записи будут удалены в ближайшее время. Если вы хотите отменить удаление, немедленно свяжитесь с нашей службой поддержки клиентов. После обработки удаления восстановить учетную запись уже невозможно."
+      contact_support: Контактная поддержка
+    edit:
+      delete_title: "Если вы хотите полностью удалить свой аккаунт, перейдите по ссылке"
+      pdf_headers: Редактировать заголовки отчета PDF
+      small_pdf_header: Настройте заголовки вашего PDF-отчета
+  expert_group_admin:
+    second_opinions:
+      index:
+        title: Запросы на второе мнение
+        from: с
+        image_count: '№ изображений'
+        status: статус
+        created_at: полученный в
+        requests: запросы
+        credits: кредиты
+      sent:
+        title: Запросы на второе мнение
+        image_count: '№ изображений'
+        sent_at: отправлено
+        requests: запросы
+        to: к
+        credits: кредиты
+    credit_mutations:
+      index:
+        title: Изменения по кредитам
+        add_credits: "Мутировать пользовательские кредиты"
+        amount_hint: "*Введите отрицательное значение для вычитания кредитов"
+        admin_insufficient_credits: "У вас недостаточно кредитов для выполнения этого бронирования"
+        user_insufficient_credits: "У этого пользователя недостаточно кредитов"
+        credit_balance: "Ваш текущий баланс: <strong>%{amount}</strong> кредитов"
+      overview:
+        title: Изменения по кредитам
+        sent_by: С
+        received_by: К
+        amount: Кредиты
+        csv: Скачать CSV
+        pdf: Экспорт в PDF
+        comment: Комментарий
+        created_at: "Создано на"
+    users:
+      index:
+        title: Пользователи группы
+        invite_user: Пригласить пользователя
+        users: пользователи
+      show:
+        title: Подробнее о пользователе
+        users_overview: Пользователи группы
+      detach:
+        title: Отсоединение пользователя
+        explanation: 'При отсоединении пользователя будут удалены все данные, связанные с ним. Вы уверены, что этого пользователя можно удалить?'
+        sure: 'Я уверен, удалите этого пользователя'
+        confirm: Вы уверены?
+        users_overview: Пользователи группы
+        success: 'Пользователь успешно отсоединен!'
+      invite:
+        users_overview: Пользователи группы
+        title: "Пригласить %{role}"
+      form:
+        information: Информация
+  invitations:
+    index:
+      token_invalid: Токен приглашения удален, пожалуйста, свяжитесь с администратором для отправки нового!
+      accept: Принять приглашение
+      submit: Сохранить
+      already_active: "Эта учетная запись уже активна, попробуйте войти в систему с заданным паролем"
+  api_registrations:
+    edit:
+      title: "Полный"
+      subtitle: "регистрация в FotoFinder Hub"
+      submit_text: "Полная регистрация"
+  user_mailer:
+    welcome:
+      subject: "Добро пожаловать в центр FotoFinder!"
+    invitation:
+      subject: "Приглашение на FotoFinder Hub"
+    api_welcome:
+      subject: "Добро пожаловать в центр FotoFinder!"
+    invited_to_clinic:
+      subject: "Добро пожаловать в %{clinic}"
+    cancel_plan:
+      subject: "Счет-фактура на Fotofinder Hub"
+    delete_reminder:
+      subject: "Напоминание об удалении учетной записи Fotofinder Hub"
+  api_error:
+    no_api_key:
+      message: Ключ api не найден
+      suggestion: Связаться с FotoFinder
+    no_user:
+      message: Пользователь не найден
+      suggestion: Связаться с FotoFinder
+    unconfirmed:
+      message: Эта информация не подтверждена
+      suggestion: Пожалуйста, завершите регистрацию
+      action_name: Завершите регистрацию
+    unauthorized_device:
+      message: Это устройство является несанкционированным
+      suggestion: Свяжите это устройство с концентратором
+      action_name: Устройство связи
+    disabled:
+      message: Эта учетная запись отключена
+      suggestion: Связаться с FotoFinder
+  users:
+    mobile_show:
+      btn_choose_plan: "Выберите свой план"
+    identity_data:
+      title: "FotoFinder Профиль"
+      subtitle: "Информация об аккаунте и доступ"
+      info_text1: "Это личная информация, которую вы используете для доступа и управления своим аккаунтом."
+      account_name: "Имя учетной записи"
+      email: "Электронная почта"
+      role: Роль учетной записи
+    password_data:
+      title: "Пароль и безопасность"
+      info_text: "Чтобы сменить пароль, сначала необходимо проверить текущий пароль. Затем создайте пароль, который вы не используете в других местах, и обязательно меняйте его регулярно, а также в любое время, когда вы подозреваете, что он был скомпрометирован."
+    two_factor_authentication:
+      title: "Двухфакторная аутентификация"
+      enabled: "Включено"
+      disabled: "Выключено"
+      disable: "Отключить"
+      enable: "Включить"
+      btn_title: "%{state} Двухфакторная аутентификация"
+      info_text: "Двухфакторная аутентификация (2FA) работает путем добавления дополнительного уровня безопасности к вашей учетной записи. Для получения доступа к учетной записи требуется дополнительная учетная запись - помимо имени пользователя и пароля, - а для получения второй учетной записи требуется доступ к чему-то, что принадлежит вам."
+    trigger_tfa:
+      wrong_token: "Неправильный проверочный токен!"
+  pages:
+    about:
+      title: "О сайте"
+      about_text: "<b>FotoFinder hub</b> - это платформа для хранения и <b>второго мнения</b> для пользователей ручного микроскопа."
+      contact: "Связаться:"
+      follow_instructions: "Следуйте инструкциям по использованию!"
+      open_link: "Открыть"
+      device_compliant: "Устройство соответствует директиве 93/43/EEC о медицинских приборах."
+      medical_device: "Медицинский прибор"
+  simple_form:
+    labels:
+      short_description: Краткое описание
+      work_history: Трудовая биография
+      experience: Опыт
+      vat_nr: "НДС №"
+      name: Имя
+      email: Адрес электронной почты
+      password: Новый пароль
+      password_confirmation: Повторный ввод пароля
+      current_password: Старый пароль
+      time_zone: Часовой пояс
+      last_name: Фамилия
+      first_name: Имя
+      middle_name: Среднее имя
+      date_of_birth: Дата рождения
+      sex: Пол
+      company: Компания / Практика
+      country: Страна
+      street: Адрес улицы
+      city: Город
+      state: Государство
+      zip_code: Почтовый индекс
+      patient_id: ID пациента
+      phone: Номер телефона
+      report_header_line_1: "Заголовок отчета 1"
+      report_header_line_2: "Заголовок отчета 2"
+      report_header_line_3: "Заголовок отчета 3"
+      report_header_line_4: "Заголовок отчета 4"
+      report_header_line_5: "Заголовок отчета 5"
+      logo: "Логотип"
+  admin:
+    users:
+      stats: Статистика
+      sign_up_date: Дата регистрации
+      last_sign_in_at: Последняя регистрация в
+      sign_in_count: Количество входов
+      total_uploaded_images: Всего загруженных изображений
+      total_images_size: Общий размер загруженных изображений
+      admin_features: Возможности администратора
+      audit: Журнал аудита
+      impersonate: Выдать себя за пользователя
+      confirm: Подтверждение пользователя
+      reinvite: Повторная отправка приглашения
+      to_confirm_message: Вы уверены, что хотите подтвердить этого пользователя?
+      to_impersonate: Вы уверены, что хотите выдать себя за этого пользователя? Будьте осторожны!
+      index:
+        title: "Обзор пользователей"
+        csv: "CSV"
+        invite_ega: "Пригласить ЕГА"
+        invite_expert: "Пригласить эксперта"
+        invite_doctor: "Пригласить врача"
+        inactive_users: "Неактивные пользователи"
+        users: пользователи
+        search: Поиск пользователя
+      edit:
+        title: Редактировать пользователя
+        csv: "CSV"
+        users_overview: Обзор пользователей
+        invitation_sent: Приглашение отправлено!
+      delete:
+        title: Удалить пользователя
+        users_overview: Обзор пользователей
+        explanation: Удаление пользователя может ухудшить целостность приложения, вы уверены, что этого пользователя можно удалить?
+        sure: Я уверен, удалите этого пользователя
+        confirm: Вы уверены?
+      plan_on_account:
+        title: План на аккаунте
+        users_overview: Обзор пользователей
+        explanation: Если вы выберете план здесь, Hub будет считать, что пользователь выставляет счета за пределами Hub. Пользователь сохранит этот план на неопределенный срок.
+        plan_details: Детали плана
+        plan: План
+        exp_date: Дата истечения срока действия
+        is_stripe: Пропустить Stripe
+        manually_set_by: Подписка устанавливается вручную
+        stripe_id: ID клиента Stripe
+        status: Статус
+        active_date: Активен до
+        eligible: Право на бесплатное испытание
+        on_trial: На суде
+        active: Активный
+        not_active: Не активен
+        cancel_at: Аннулирование на конец периода
+        grace_date: Льготный период до
+        renew_date: Готовность к обновлению с
+        currency: Валюта
+        is_daily: Ежедневная подписка
+        is_annual: Годовая подписка
+        lifetime_sub: Пожизненная подписка
+        in_grace_period: В льготный период
+        ready_to_renew: Готовность к обновлению
+        coupon: Купон
+        payment_display: Отображение счета оплаты
+        payment_display_file: Файл платежного счета
+        history: "История"
+        replace_subscription: "Заменить подписку"
+        general_information: "Общая информация"
+        dates: "Даты"
+        additional_information: "Дополнительная информация"
+        misc_information: "Разная информация"
+        stripe_info: "Информация для клиентов Stripe"
+        currency_not_available: "*Карта не подключена"
+        plan_on_account_info: "*Либо счет не активирован, либо не подходит для плана по счету"
+      invite:
+        title: "Пригласить %{role}"
+        users_overview: "Обзор пользователей"
+        information: Информация
+        group: Группа
+      inactive_users:
+        title: "Неактивные пользователи"
+        download: "Скачать"
+        remove: "Удалить"
+        users_overview: "Обзор пользователей"
+        first_name: Имя
+        last_name: Фамилия
+        last_sign_in_at: Последняя активность
+        email: Электронная почта
+        total_image_count: Изображение(я) пациента
+        users: пользователи
+      confirm_delete_inactive_users:
+        title: Подтверждение Удалить пользователей
+        inactive_users_overview: Неактивные пользователи
+        explanation: Удаление неактивного пользователя (пользователей) может ухудшить целостность приложения, вы уверены, что пользователь (пользователи) может быть удален?
+        sure: Я уверен, удалить пользователя (пользователей)
+      confirm_download_inactive_users:
+        sure: Загрузить неактивных пользователей в файл CSV
+        explanation: Загрузить всех неактивных пользователей
+        title: Загрузить неактивных пользователей
+        inactive_users_overview: Неактивные пользователи
+      confirm_download:
+        title: Скачать пользователя
+        users_overview: Обзор пользователей
+        user_edit: Редактировать пользователя
+        user_credit_mutations: Изменения по кредитам
+        user_plan_on_account: План на аккаунте
+        user_delete: Удалить пользователя
+        explanation: Загрузка данных пользователя должна осуществляться с его разрешения и только по его требованию
+        sure: Скачать
+      search_suggest:
+        email: Электронная почта
+    group_experts:
+      index:
+        title: "Обзор клиник"
+        add_group: "Новая клиника"
+        groups: группы
+        requirements_explain_html: "*Клиника должна содержать как минимум 1 администратора <b>и</b> 1 эксперта, недействительная клиника отмечена красным."
+      new:
+        title: "Новая экспертная группа"
+        group_overview: "Обзор экспертных групп"
+      edit:
+        title: "Экспертная группа по редактированию"
+        group_overview: "Обзор экспертных групп"
+      show:
+        title: "Детали клиника"
+        group_overview: "Обзор клиник"
+        users: пользователи
+        delete_confirm: Вы уверены, что хотите удалить эту группу?
+      form:
+        global_access_explain: "*Если включено, врачи могут выбирать другие глобальные действующие группы (как минимум 1 эксперт + 1 администратор) во время создания второго мнения."
+        ai_score_explain: "* Разрешить всем врачам в группе использовать функцию AI Score. Нет лимита кредитов для частной группы."
+        private_group_explain: "*Если включено, нет ограничений на загрузку изображений и начисление баллов ai для врачей, подключившихся к частной группе."
+    groups:
+      private_group: Частная группа
+      regional_details: Региональные подробности
+      settings: Настройки
+      select_expert_group: Экспертные группы
+      assigned_photofinder_groups: Назначенные группы FotoFinder
+      group_name: Имя
+      group_region: Регион
+      group_language: Язык
+      max_space: Максимальное пространство
+      group_users_length: Количество пользователей
+      group_doctors_length: Количество врачей
+      group_experts_length: Количество экспертов
+      group_access: Глобальный доступ
+      index:
+        edit_group: Редактирование клиника
+        delete_group: Удалить клиника
+      users:
+        first_name: Имя
+        last_name: Фамилия
+        dob: Дата рождения
+        country: Страна
+        credits: Кредиты
+        last_sign_in_at: Последняя активность
+        role: Роль
+    credit_mutations:
+      index:
+        add_credits: "Мутировать пользовательские кредиты"
+        title: "Изменения по кредитам"
+        amount_hint: "*Введите отрицательное значение для вычитания кредитов"
+        users_overview: Обзор пользователей
+      overview:
+        title: "Обзор изменений по кредитам"
+    pages:
+      index:
+        title: 'Обзор страниц'
+        new_page: 'Новая страница'
+        created_at: 'Создан в'
+        language: "Язык"
+        category: "Категория"
+      new:
+        title: Новая страница
+        pages_overview: "Обзор страниц"
+      edit:
+        title: Редактировать страницу
+        pages_overview: "Обзор страниц"
+      delete:
+        title: Удалить страницу
+        explanation: 'Вы уверены, что хотите удалить эту страницу?'
+        pages_overview: "Обзор страниц"
+        confirm: 'Вы уверены?'
+        sure: 'Я уверен, удалите эту страницу'
+    settings:
+      edit:
+        title: "Настройки приложения"
+        disabled: Выключено
+        enabled: Включено
+        credits: Кредиты
+        features: Особенности -
+        active: Активный
+        inactive: Неактивный
+        bg_job_status: Фоновая работа - статус
+        usr: ПОЛЬЗОВАТЕЛЬ
+        # what does it states for?
+        pid: PID
+        stat: ГОСУДАРСТВО
+        tm: ВРЕМЯ
+        cmd: КОМАНДА
+        start: Начало
+        stop: Остановить
+        success_start: Успешный запуск фонового задания.
+        success_stop: Успешно остановлено фоновое задание.
+        # What BG means?
+        already_start: Работа BG уже началась!
+        no_bg_job: Нет активной работы BG!
+        size_limit_on: Ограничения размеров изображений
+        size_limit_explain: "*Если он включен, это означает, что пользователи ограничены расчетом размеров изображений. В противном случае пользователи ограничены количеством хранимых изображений."
+        so_v2: Второе мнение V2
+        so_v2_explain: "*Если эта функция включена, врачи могут изменить группу экспертов во время создания второго заключения."
+        fsize_on: Атрибуты объекта изображения 'fsize'
+        # fsize - what is it?
+        fsize_explain: "*Возможность расчета общего размера файла изображений пользователя на основе атрибута fsize объекта изображения"
+        migration_progress: "Миграционный прогресс: "
+        progress: "Прогресс: "
+        confirm: "Подтвердить"
+        refresh: "Обновить"
+        remaining_migrated_images: "Оставшееся изображение (изображения), подлежащее миграции:"
+        migration_in_progress: "Выполняется задание BG для %{image_count} изображения(й)..."
+      image:
+        current_image: "(%{cur_count} из %{count}) Изображение %{id}: %{fsize} байт"
+        last_update: "%{last_image} (Последнее обновление: %{datetime})"
+    admin:
+      index:
+        title: "Мой профиль"
+        qr_title: "%{state} Двухфакторная аутентификация"
+        disable: "Отключить"
+        enable: "Включить"
+        verify_token: "Проверить токен:"
+        insert_token: "Вставить маркер"
+        recovery_code: "Ваш код восстановления:"
+        recovery_code_message: "Пожалуйста, храните код восстановления в надежном и запоминающемся месте."
+    history_trackings:
+      index:
+        title: "Журнал аудита"
+        type: Тип
+        action: Действие
+        version: Версия
+        changes_count: Изменения
+        modifier: Пользователь
+        created_at: Создано в
+        trackings: трекинги
+      show:
+        meta_data: "Метаданные"
+        changes: "Изменения"
+        changed_object: "Измененный элемент"
+        type: "Тип"
+        action: "Действие"
+        version: "Версия"
+        changes_count: "Изменения"
+        modifier: "Пользователь"
+        created_at: "Создан в"
+        original: "Оригинал"
+        modified: "Модифицированный"
+    subscription_histories:
+      index:
+        plan_account: "План по счету"
+        sub_list: "Подписной лист"
+        subscription: "Подписка"
+        currency: "Валюта"
+        stripe_id: "Stripe ID"
+        created_at: "Создано в"
+        action: "Действие"
+        list_explain: "Этот список содержит подписки, которые пользователь использовал ранее. Вы можете заменить текущую подписку на подписку из списка."
+      new:
+        replace_sub: "Заменить подписку"
+        replace_sub_explain: "Это заменит текущую подписку пользователя. Пользователь <b>должен</b> повторно ввести платежную информацию."
+        plan: "План"
+        currency: "Валюта"
+        skip_stripe: "Скип Stripe"
+        current_sub: "Текущая подписка"
+        current_sub_legend: "(План - Валюта - Скип Stripe)"
+      subscription_history:
+        use: "Используйте"
+    rcrs:
+      index:
+        title: "Обзор запросов на изменение региона"
+        rcrs: "Запросы на изменение региона"
+      show:
+        title: "Запрос на изменение региона"
+        start_migration: "Начать миграцию"
+        status: "Статус"
+        errors: "Ошибки миграции"
+        logs: "Журналы"
