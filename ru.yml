@@ -29,7 +29,7 @@ ru:
         strip_insignificant_zeros: ""
   time:
     in_words:
-      today: ''
+      today: 'cheking in russian'
       yesterday: ''
     formats:
       short: ""
