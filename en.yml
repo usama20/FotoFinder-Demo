@@ -1,0 +1,1608 @@
+en:
+  number:
+    # Used in number_with_delimiter()
+    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: ","
+      # Delimits thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: "."
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 3
+      # If set to true, precision will mean the number of significant digits instead
+      # of the number of decimal digits (1234 with precision 2 becomes 1200, 1.23543 becomes 1.2)
+      significant: false
+      # If set, the zeros after the decimal separator will always be stripped (eg.: 1.200 will be 1.2)
+      strip_insignificant_zeros: false
+    # Used in number_to_currency()
+    currency:
+      format:
+        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
+        format: "%u %n"
+        unit: "€"
+        # These five are to override number.format and are optional
+        separator: ","
+        delimiter: "."
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+  time:
+    in_words:
+      today: 'Today'
+      yesterday: 'Yesterday'
+    formats:
+      short: "%d.%m.%Y"
+      time_only: "%I:%M%p"
+      long: "%d.%m.%Y, %I:%M%p"
+      invoice: "%B %-d, %Y"
+    am: "am"
+    pm: "pm"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%d.%m.%Y"
+      long: "%B %d, %Y"
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    order:
+      - :year
+      - :month
+      - :day
+  application:
+    errors:
+      user_credits: "You don't have enough credits"
+      bodypart_field: "%{field} cannot be blank"
+      version_conflict: 'Version conflict'
+      device_limit_reached: 'You have reached the device limit of your plan'
+    required_explanation: Fields marked with <abbr>*</abbr> are mandatory.
+    title: FotoFinder Hub
+    back: 'Back'
+    close: 'Close'
+    cancel: 'Cancel'
+    change: 'Change'
+    search: 'Search'
+    pagination:
+      show: 'Show'
+      per_page: 'per page'
+    male: Male
+    female: Female
+    download: Download
+    credit_mutations: Credit mutations
+    beta: "This application is currently in Beta (%{link})"
+    what_does_this_mean: "what does this mean?"
+    filter: "Filter"
+  shared:
+    credits: 'Credits / Plans'
+    credits_only: Credits
+    privacy_mode: 'Privacy mode'
+    privacy_mode_warning: 'WARNING you are in privacy mode. Editing a patient will reveal patients name'
+    second_opinion: 'Second Opinion'
+    credit_mutation: 'Credit mutations'
+    select_all_images: 'Select all images'
+    overview: 'Overview'
+    previous: 'Previous'
+    next: 'Next'
+    datetime: 'Date & Time'
+    source: 'Source'
+    yip: 'Yes'
+    nop: 'No'
+    invalid: invalid
+    add_comment: 'Your comment'
+    write_message: 'Write a message'
+    message: 'Message'
+    medical_history: 'Medical History'
+    select: 'Please select'
+    select_one_photo: "Please select at least one photo!"
+    select_max_two_photos: "Please select a maximum of 2 images!"
+    select_photo_explain: "These functions can only be started with selected images."
+    see_comment: See comment
+    expert_group: 'Expert Group'
+    view_group_members: 'View members of this group'
+    cost: 'Cost'
+    optional: 'optional'
+    per_request: "per request"
+    purchase_credits: "Purchase credits"
+    case_id: "Case ID#: %{case_id}"
+    loading_text: Loading...
+    invoices: Invoices
+    back_home: Back to Home
+    stripe_card_error: "Your card was declined. This transaction requires authentication."
+    private: private
+    public: public
+    image: image
+    images: images
+    delete_prompt: "Are you sure?"
+    invalid_var_nr_warning: "WARNING: Tax Number is invalid"
+    roles:
+      doctor: "Doctor"
+      expert: "Expert"
+      expert_group_admin: "Clinic Admin"
+      admin: "Admin"
+    unknown: "Unknown"
+    card_authorization_required:
+      title: "Authentication of your card is required"
+      authenticate: "Authenticate Card"
+    confirm_payment:
+      title: Just One More Step
+      subtitle: Credits - Payment Overview
+      confirm_button: Confirm Payment
+      payment_confirmation_required: "Just one more step, click <span class='font-bold'>„Confirm Payment“</span> button to finalize the payment process."
+      cc_last_digits_info: "You'll pay using the credit card with the last 4 digits <strong>%{cc_last_digits}</strong> we have on file for you."
+      info_cancel: "You can also go back to <span class='font-bold'><a href='/doctor/credit_mutations'>the credits overview page</a></span>."
+      selected_package: "You selected a package of <strong>%{amount} credits</strong> as shown in the summary below."
+    stripe_customer_not_found: "Stripe Customer %{id} is not found on the database."
+
+    blocker_modal:
+      welcome: Welcome!
+      go_back_to_mobile_app: You registered successfully.<br/>It's safe to close this page and go back to mobile application.
+    save_block:
+      save: 'Save'
+      send: 'Send'
+      export_to_pdf: 'Export to PDF'
+      cancel: 'Cancel'
+      reset: 'Reset'
+      ok: 'Ok'
+    credit_mutations:
+      hub2:
+        history:
+          spending_history: "Spending History"
+          earning_history: "Earning History"
+          credit_overview: "Credit Overview"
+      index:
+        successfully_register: You have registered successfully!
+        pop_up: Welcome!
+        plan_message_mobile: "A <strong>'%{plan}'</strong> Plan was assigned to your account. You can go back to the handyscope application and enjoy it. <br/><br/> P.S. Take a look at our %{link}. Maybe a different one will work for you better."
+        plan_message: "A <strong>'%{plan}'</strong> Plan was assigned to your account. <br/><br/> P.S. Take a look at our %{link}. Maybe a different one will work for you better."
+        plans: plans
+    hub2:
+      admin_header:
+        user_edit: Edit User
+        user_credit_mutations: Credit mutations
+        user_plan_on_account: Plan on account
+        user_manage_access: "Manage Access"
+      admin_expert_group_header:
+        detach_user: Detach User
+        user_details: User details
+        user_credit_mutations: Credit mutations
+      doctor_navigation:
+        privacy_activated: "activated"
+        privacy_deactivated: "deactivated"
+        patients_overview: "Patients Overview"
+        second_opinion: "Second Opinion"
+        my_account: "My Account"
+        devices: "Devices"
+        support: "Support"
+        logout: "Logout"
+        plan: "Your Plan:"
+        group: "Your Group"
+        credits_plan: "Credits & Plans"
+        clinic_panel: "Clinic Admin Panel"
+        switch: "Switch Account"
+      non_doctor_panel:
+        logout: "Logout"
+        my_account: "My Account"
+        requests: "Requests"
+        sent: "Sent"
+        credit_mutations: Credit Mutations
+      clinic_panel:
+        to_dashboard: "Doctor Dashboard"
+      admin_navigation:
+        users: "Users"
+        clinics: "Clinics"
+        fotofinder_groups: "FotoFinder Groups"
+        pages: "Pages"
+        application_settings: "Application Settings"
+        auditlog: "Auditlog"
+        rcr: "RCRs"
+        switch_acc: "Switch Account"
+      patient_info:
+        confirm_delete: "Are you sure you want to delete the current patient?"
+        btn_delete: "Delete"
+        skin_type: "Skin type"
+        skin_cancer: "Skin cancer"
+        moles_excised: "Moles excised"
+      image:
+        second_opinion: "Second Opinion"
+        comment: "Comment"
+      second_opinion_result:
+        diagnosis: Diagnosis
+        differential_diagnosis: Differential Diagnosis
+        suggestion: Suggestion
+        comment: Comment
+        prev: Previous
+        next: Next
+        of: of
+      second_opinion_details:
+        result_box_title: "Advise from Study Expert"
+        group_of_experts: "Group of Experts: %{expert_group}"
+      second_opinion_detail_subheader:
+        ff_ai: FotoFinder AI
+        medical_history: Medical History
+        previous_irragularities_question: Have there been irregularities before?
+        yep: "yes"
+        nop: "no"
+        not_sure: not sure
+        ai_score_request: "AI Score request:"
+        ai_score_result: "Result:"
+        not_available: "N/A"
+      footer:
+        about: "About"
+        privacy: "Privacy"
+        terms-of-service: "Terms of Service"
+        contact: "Contact"
+        support: "Support"
+        learn_more: "Learn more"
+      expert_navigation:
+        credits: "Credits"
+      expert_group_admin_navigation:
+        users: "Shared Users"
+      user_table:
+        first_name: First Name
+        last_name: Last Name
+        role: Role
+        plan: Plan
+        image_usage: Image Usage
+        credits: Credits
+        last_sign_in_at: Last activity
+        status: Status
+        invite: Invited
+        not_accepted: Not accepted
+        accepted: "Accepted at %{date}"
+        registered: "Registered at %{date}"
+      rcr_table:
+        user_email: User Email
+        creation_date_of_rcr: Creation Date
+        current_region: Source Region
+        destination_region: Destination Region
+        last_update_of_rcr: Last Update
+        current_status_of_rcr: Current Status
+      group:
+        info_credits: "20 Credits / Second Opinion"
+        members: "%{count} Member(s)"
+        btn_view_group: View Group
+        select_group: Select
+        current_group: Currently selected
+      switch_account_modal:
+        title: "Switch Account"
+    unselect_all_images: "Unselect all images"
+  supports:
+    index:
+      header: Contact Support
+    create:
+      header: Support
+      accept_message: Your Mail has been sent successfully to our support unit. We will work on a solution for you as soon as possible.
+      thank_you: Thank you, your FotoFinder Hub Team
+  ai_score:
+    low: The AI has calculated a low risk profile for this lesion.
+    medium: The AI cannot calculate a clear risk profile for this lesion.
+    high: The AI has calculated a high risk profile for this lesion. Further assessment by our second opinion service is advised.
+    invalid: Invalid score!
+    clinical_outclass_name: Outclass name is clinic, cannot provide clear description of the score.
+    not_enough_credits: not enough credits to use ai score feature
+    eligible: user has the ability to use ai score feature
+  api:
+    images:
+      payment_required: You have reached your PLAN limit, please upgrade your plan in order to upload more images.
+  pdf:
+    intro: "A member of our team of international skin cancer expert has reviewed your dermoscopic image for a secondary, independent opinion. This rating is based on the uploaded picture and information and provides you with the recommendations needed to develop an effective treatment plan."
+    second_opinion_report: "Second opinion report"
+  pricing_validation:
+    only_doctor: only a doctor has the access to the feature
+  errors:
+    helpers:
+      message: "Please check the following fields: %{attributes}."
+      words_connector: ", "
+      two_words_connector: " and "
+      last_word_connector: " and "
+    messages:
+      extension_whitelist_error: "%{extension} is not allowed, allowed types: %{allowed_types}"
+      max_size_error: "size should be less than %{max_size}"
+      blank_file: "File can't be blank"
+      not_found: "not found"
+      already_confirmed: "was already confirmed, please try signing in"
+      expert_limit: "This group reached its expert limit, you can't invite any more experts."
+      doctor_limit: "This group reached its doctor limit, you can't invite any more doctors."
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+  devise:
+    failure:
+      unauthenticated: ''
+      unconfirmed: 'Your account has not been confirmed yet, please check your e-mail for the confirmation e-mail.'
+      locked: 'Your account is locked. Email sent with unlock instructions.'
+      invalid: 'Invalid email or password.'
+      not_found_in_database: 'Invalid email or password.'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Your session expired, please sign in again to continue.'
+      inactive: 'Your account is not active.'
+      confirm_failed: 'Confirmation failed. Your account is already confirmed or the confirmation key is invalid.'
+    sessions:
+      blocked: 'Your account has been blocked'
+      introduction: 'Enter your email address and password in order to access FotoFinder Hub.'
+      sign_in: 'Sign in'
+      forgot_password: 'Forgot password?'
+      no_account_yet: "Don't have an account yet?"
+      sign_up_here: 'Sign up here'
+      to_get_started: 'to get started'
+      sign_out: 'Logout'
+      new:
+        headline_1: "Your flexible and powerful platform"
+        headline_2: "for mobile dermoscopy!"
+        placeholder_email: "Email address"
+        placholder_password: "Password"
+        sign_to_account: "<span class='font-bold underline'>Sign in</span> to your FotoFinder Hub account"
+      create:
+        headline: "Two-Factor Authentication"
+        box_title: "Authentication code"
+        placeholder: "Your authentication code"
+        verify_code: "Verify code"
+        info_text: "Open the two-factor authentication app on your device to view your authentication code and verify your identity."
+    confirmations:
+      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
+      confirmed: 'Your account was successfully confirmed. You can now sign in.'
+      confirm_failed: 'Confirmation failed. Your account is already confirmed or the confirmation key is invalid.'
+    passwords:
+      user:
+        send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+    registrations:
+      beta: "This website has been released in its beta version. The use of this website is on free basis until the beta period has been ended."
+      fotofinder_identity: 'FotoFinder Identity'
+      personal_information: 'Personal Information'
+      contact_information: 'Contact Information'
+      security_check: 'Security Check'
+      tos: 'Terms of Service Agreement'
+      valid_license: 'Valid license'
+      valid_license_notice: 'Note: FotoFinder Second Opinion services may only be used by physicians. You are obliged to provide adequate proof upon request.'
+      register: 'Register'
+      signed_up: 'Welcome! You have signed up successfully. We have sent a confirmation e-mail, please click the link in it to confirm your account'
+      inactive_signed_up: 'You have signed up successfully. However, we could not sign you in because your account is %{reason}.'
+      updated: 'You updated your account successfully.'
+      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+      group: FotoFinder Group
+      clinic: "Clinic"
+      expert_information: Expert Information
+      company_information: Company information
+      edit_expert_information: Edit Expert Information
+      edit_company_information: Edit Company Information
+      edit_personal_information: Edit Personal Information
+      sign_up: "Sign up"
+      create_account: "Create your account"
+      login: "log in"
+      or: "or"
+      recaptcha_text: "This page is protected by reCAPTCHA, and subject to the Google <span class='mr-1 underline'>Privacy Policy</span> and"
+      user:
+        confirm: You have received an email to confirm your account. After confirming you can sign in.
+    unlocks:
+      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
+      unlocked: 'Your account was successfully unlocked. You are now signed in.'
+    omniauth_callbacks:
+      success: 'Successfully authorized from %{kind} account.'
+      failure: 'Could not authorize you from %{kind} because "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Confirmation instructions'
+      reset_password_instructions:
+        subject: 'Reset password instructions'
+      unlock_instructions:
+        subject: 'Unlock Instructions'
+  passwords:
+    new:
+      forgot_password: 'Forgot your password?'
+      forgot_password_submit: 'Send instructions'
+      login_back: Back to Login
+    edit:
+      change_password: 'Change your password'
+      change_password_submit: 'Change my password'
+    send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
+    updated: 'Your password was changed successfully. You are now signed in.'
+    update:
+      new_password: 'New Password'
+      retype_password: 'Re-Type Password'
+      warning: All linked devices will be disconnected after updating password
+    strength:
+      strength1: 'Too Weak'
+      strength2: 'Weak'
+      strength3: 'Normal'
+      strength4: 'Strong'
+      strength5: 'Very Strong'
+    validity:
+      ok: 'Ok!'
+      error: 'Error'
+      not_match: 'No match!'
+      too_short: 'Too short!'
+  mongoid:
+    errors:
+      models:
+        patient:
+          attributes:
+            first_name:
+              blank: "can't be blank"
+              no_number: "First name cannot contain numbers"
+            last_name:
+              blank: "can't be blank"
+              no_number: "Last name cannot contain numbers"
+            patient_id:
+              taken: "is taken"
+        user:
+          attributes:
+            email:
+              blank: "can't be blank"
+              invalid: "is invalid"
+              taken: "is already taken"
+            first_name:
+              blank: "can't be blank"
+            last_name:
+              blank: "can't be blank"
+            vat_nr:
+              blank: "can't be blank"
+            base:
+              captcha: 'The security check you filled in was incorrect.'
+        rcr:
+          attributes:
+            destination:
+              blank: "can't be blank"
+    attributes:
+      user:
+        name: Name
+        email: Email Address
+        password: New Password
+        password_confirmation: Re-Type Password
+        current_password: Old Password
+        time_zone: Time zone
+        last_name: Last Name
+        first_name: First Name
+        middle_name: Middle Name
+        date_of_birth: Date of Birth
+        sex: Sex
+        company: Company / Practice
+        country: Country
+        street: Street Address
+        city: City
+        state: State
+        zip_code: Zip Code
+        patient_id: Patient ID
+        phone: Phone number
+        vat_nr: "VAT nr"
+        short_description: Short Description
+        work_history: Work History
+        experience: Experience
+        avatar: Avatar
+        logo: Logo
+        report_header1: Report Header 1
+        report_header2: Report Header 2
+        report_header3: Report Header 3
+        report_header4: Report Header 4
+        report_header5: Report Header 5
+      second_opinion:
+        previous_irragularities: 'Have there been irregularities before?'
+      rcr:
+        destination: "Destination"
+  user:
+    email: 'Email address'
+    password: 'Password'
+    password_confirmation: 'Password Confirmation'
+    accept: 'I accept'
+    terms: 'The Terms of Service'
+    valid_license: 'I hereby declare that I am a physician with valid license to practice in my state/ country according to applicable law'
+    incorrect_password: 'Password is incorrect, please try again'
+    invalid_dob: cannot be in the future
+  credit_mutations:
+    current_credits: "Current Balance <strong>%{amount}</strong> Credits"
+    search: "sender, recipient or comment"
+    date: "Date"
+    from_to: "Sender / Recipient"
+    from: "Sender"
+    to: "Recipient"
+    comment: "Comment/Device"
+    amount: "Amount"
+    filter_on: "Filter on"
+    reset: "reset"
+    total: "Total"
+    progress_bar:
+      image: image(s)
+      images: images
+  doctor:
+    clinic:
+      second_opinions:
+        index:
+          title: "Second Opinion Requests"
+          from: "from"
+          image_count: "# of images"
+          created_at: "received at"
+          status: "status"
+          credits: "credits"
+        sent:
+          title: "Second Opinion Requests"
+          to: "to"
+          image_count: "# of images"
+          sent_at: "sent at"
+          credits: "credits"
+      users:
+        index:
+          title: Users
+          invite_user: Invite user
+        form:
+          information: "Information"
+    credit_purchases:
+      success:
+        title: Top up your Credits
+        second_title: Purchase complete
+        explanation: "<span class='text-4xl font-semibold'>%{amount} Credits</span> <br> have been added to your account."
+        back_to_overview: Back to overview
+      create:
+        title: Top up your Credits
+        selected_package: "You selected a package of <strong>%{amount} credits</strong> as shown in the summary below."
+        info_cancel: "You can also go back to <span class='font-bold'><a href='/doctor/credit_mutations'>the credits overview page</a></span>."
+        box_title: "Credits - Payment overview"
+        info_text_1: "In order to confirm your order, click <span class='font-bold'>„Make Payment“</span> button to proceed with the payment process."
+        info_text_2: "You'll pay using the credit card with the last 4 digits <strong>%{cc_last_digits}</strong> we have on file for you."
+        button_title: "Make payment"
+        per_credit: "per credit"
+    subscriptions:
+      plan:
+        coupon_not_valid: is not valid for this plan.
+        current_plan: "Current plan"
+        devices: "%{device} Devices"
+        free: "Free"
+        incl_vat: "incl. VAT"
+        image_omparison: "Image Comparison"
+        multiple: "Multiple Devices"
+        patient_manage: "Patient Management"
+        personalized_printing: "Personalized Printing"
+        price_per_month: "%{price_per_month} / month"
+        report_printing: "Report Printing"
+        second_opinion: "Second Opinion Service"
+        sign_up_to_plan: "Sign up to plan"
+        storage_space: "%{storage_space} Storage Space"
+        successful_subscription: Successfully signed up for the %{plan_name} plan, thank you!
+        trichoscale: "Direct access from FotoFinder Trichoscale for hair analysis *"
+        unknown_coupon: Unknown coupon, please try again
+        upload_local: "Upload Local Pictures"
+      signup_plan:
+        confirm_header: "Sign up to the <span class='font-bold'>%{plan_name}</span> plan"
+        confirm_text: "Click <span class='font-semibold underline'>confirm</span> below to choose the %{plan_name} plan."
+        free: "Free"
+        price_per_month: "%{price_per_month} / month"
+        incl_vat: "incl. VAT"
+        plan_voucher: "Plan voucher"
+        enter_code: "Enter your activation code:"
+        info_text1: "A credit card is necessary to confirm your plan."
+        info_text2: "Please note that your credit card will only be debited after expiry of your voucher or discount."
+        cancel: "Cancel"
+        confirm: "Confirm"
+        warning: "Warning!"
+        over_limit_warning: "Your actual account storage exceeds the limits of the designated Plan. You will not be able to work with this Plan until you reduce the reduce your storage."
+        over_limit_warning_count: "Your actual account number of images exceeds the limits of the designated Plan. You will not be able to work with this Plan until you reduce the reduce your number of images."
+      mobile_signup_plan:
+        titlel: "Sign up to plan"
+        free: "Free"
+        price_per_month: "%{price_per_month} / month"
+        incl_vat: "incl. VAT"
+        plan_voucher: "Plan voucher"
+        enter_code: "Enter your activation code:"
+        info_text1: "A credit card is necessary to confirm your plan."
+        info_text2: "Please note that your credit card will only be debited after expiry of your voucher or discount."
+        cancel: "Cancel"
+        confirm: "Confirm"
+    credit_mutations:
+      index:
+        title: Credits and Plans
+        offer_title: "The right offer for everyone"
+        over_limit_warning: "Your actual account size exceeds the limits of this Plan. You will not be able to work with this Plan until you reduce the number of images. You can upgrade to the next size of Plan to reduce the number of stored images and downgrade after that at any time!"
+        invalid_plan_warning: "Hub has detected an issue in your plan. Please contact our Support."
+        trichoscale_explanation: "* FotoFinder Trichoscale is a local software that has to be purchased separately."
+      private_group_box:
+        private_group: "Private Group"
+        private_group_text: "Your private group information"
+        group_name: "Name"
+        admin_name: "Admin Name"
+        admin_email: "Admin Email"
+        private_group_info-text-1: "You are part of a Private Group, which handles the financial operations centrally."
+        private_group_info-text-2: "All financial questions should be discussed with the Admin."
+      add_creditcard_box:
+        credit_card: "Credit Card"
+        no_card: "No card on file"
+        add_credit_card: "Add credit card"
+        no_card_text: "We currently <span class='font-bold'>do not have</span> a credit card on file for you."
+      edit_card:
+        title: "Add a Creditcard"
+        box_title: "Your creditcard"
+        info_text_1: "All credit card information is stored securely at our payment provider"
+        info_text_2: "We do not hold any credit card data on our servers."
+        info_text_3: "I authorise FotoFinder Systems GmbH to send instructions to the financial institution that issued my card to take payments from my card account in accordance with the terms of my agreement with you."
+        cardholder_name: "Name of cardholder"
+        card_type: "Credit or debit card"
+        button_title: "Save Card"
+        success_msg: "Credit card successfully added!"
+        name_empty_error: "You must enter the name of the cardholder"
+        subscription_changed: "Because your <u>subscription information</u> has changed, you have to update your payment information."
+      creditcard_box:
+        credit_card: "Credit card"
+        has_card: "Your card on file"
+        card_holder: "Cardholder"
+        card_number: "Card number"
+        card_expdate: "Expiration date"
+        info-text-1: "We have the following credit card on file."
+        info-text-2: "if you want to delete all cards we have on file for you."
+        click_here: "Click here"
+        confirm_msg: "Are you sure you want to delete your card?"
+        change_card: "Change credit card"
+        delete_card: "Delete credit card"
+        cancel: Cancel
+      choose_plan:
+        title: "Credits and Plans"
+        subtitle: "Choose your Plan"
+      mobile_index:
+        title: "Welcome"
+        subtitle: "Your Plan is activated"
+        info_text: "You can start now using the FotoFinder Hub and the handyscope pro app."
+      mobile_index2:
+        title: "Credits and Plans"
+      creditpack_voucher:
+        pack_voucher: "Credit-Pack voucher"
+        enter_code: "Enter your activation code"
+        activate: "Activate"
+      plans_box:
+        btn_change_plan: "Change Plan"
+        info_text1: "Cancel anytime"
+        info_text2: "No annual commitment"
+        info_text3: "Buy additional Credits for using the AI-Score and Second Opinion"
+        next_payment: "The next payment is scheduled for"
+        show_invoices: "Show Invoices"
+        cancel_plan: "Cancel Plan"
+        choose_plan: "Choose plan"
+        title: "Plans"
+        subtitle: "Your current Plan"
+        per_day: "/ day"
+        per_month: "/ month"
+        per_year: "/ year"
+        cancel_plan_title: "Please, tell us the reason for cancelling your Plan"
+        cancel_reason_1: "The product is too expensive"
+        cancel_reason_2: "I am missing an important feature for me"
+        cancel_reason_3: "I am having technical difficulties"
+        cancel_reason_4: "I no longer use this product"
+        cancel_reason_5: "I want a different product or variety"
+        cancel_reason_6: "Other reason"
+        cancel_plan_btn: "Cancel Plan"
+        continue_plan_btn: "Continue Plan"
+      mobile_choose_plan:
+        title: "Credits and Plans"
+        subtitle: "Choose your Plan"
+      credit_packs_box:
+        title: "Credit-Packs"
+        subtitle: "Top up your credits"
+        credits: "Credits"
+      invoices:
+        payment_history: "Payment History"
+        credit_overview: "Credit Overview"
+        date: "Date"
+        products: "Product(s)"
+        amount: "Amount"
+        receipt: "Receipt"
+        inc_vat: "Incl. VAT"
+        stripe_pdf: "Stripe PDF"
+      storage:
+        title: "FotoFinder Hub Space"
+        you_pay: "You pay"
+        overused: "Overused: %{storage}"
+    patients:
+      edit: 'Edit patient'
+      invalid_age: cannot be 0 year
+      index:
+        new: 'Add new patient'
+        patients: 'patients'
+        list_title: 'Patients'
+        last_name: 'Last Name'
+        date_of_birth: 'Date of Birth'
+        first_name: 'First Name'
+        last_session: 'Last Session'
+        search_bar_placeholder: "Please enter name, ID, birth date or email"
+        patient_not_found_title: "Patient not found"
+        check_spelling: "Please check spelling or %{new_patient_url}"
+        new_patient_url: "create new patient"
+      form:
+        personal: "Personal"
+        contact: "Contact"
+        medical: "Medical"
+        information: "Information"
+        patient_id: "Patient ID"
+        patient_id_info: "*Patient ID is automatically generated."
+        first_name: "First name"
+        study: "Study"
+        street_address: "Street Address"
+        city: "City"
+        zip_code: "Zip Code"
+        state: "State"
+        country: "Country"
+        email: "Email"
+        phone: "Phone"
+        radio_yes: "Yes"
+        radio_no: "No"
+        family_background: "Family Background"
+        skin_cancer: "Skin cancer"
+        clear: "Clear"
+        dob: "Date of birth"
+        body_height: "Body height"
+        last_name: "Last name"
+      edit_patient_data: 'Edit Patient Data'
+      delete_patient: 'Delete Patient'
+      welcome:
+        new_patient: "Add new patient"
+    consultations:
+      consultation_image:
+        title: "session from "
+      new: "Upload photos"
+      session: "Session %{session_number}"
+      num_of_images: "%{image_count} Images"
+      consultation:
+        see_more: "See More .."
+      index:
+        delete_images: "Delete image(s)"
+        delete: "Delete"
+        sure: 'Are you sure you want to delete the selected'
+        sure_2: 'from this session?'
+        btn_sort_consultation: "Sort by Session"
+        btn_consultation_location: "Sort by Localization"
+        btn_download_pdf: "Print Report (PDF)"
+        request_so: Request Second Opinion
+      upload_photos:
+        upload_photos: "Upload photos"
+        upload_photos_explanation: "Hold cmd (macOS) or ctrl (windows) key to select multiple files. Depending on file size, uploading photos could take a while. Do not close this dialog!"
+        photos: "Select photos:"
+      upload_images:
+        over_limit_warning: "You cannot upload these images! Your remaining storage is %{limit} MB"
+        over_limit_warning_count: "You cannot upload these images! Your remaining storage is %{limit} image(s)."
+      image_compare:
+        btn_image_compare: "Image Compare"
+      compare_menu:
+        btn_close: "Close"
+        btn_previous: "Previous"
+        btn_next: "Next"
+        btn_zoom_in: "Zoom in"
+        btn_zoom_out: "Zoom out"
+        # we put number in between from javascript 'Image from_js of from_js'
+        image_of1: Image
+        image_of2: of
+    images:
+      index:
+        delete_images: 'Delete image(s)'
+        delete: 'Delete'
+        sure: 'Are you sure you want to delete the selected'
+        sure_2: 'from this session?'
+        btn_sort_consultation: "Sort by Consultation"
+        btn_consultation_location: "Sort by Location Mark"
+        btn_download_pdf: "Print Report (PDF)"
+      image_compare:
+        btn_image_compare: "Image Compare"
+    consultation_images:
+      form:
+        save_comment: 'Save'
+        title: "Add a comment"
+        manual: 'Manual uploaded image'
+        btn_report: "Report (PDF)"
+        second_opinion: "Second Opinion"
+        histological: "Histological Findings"
+        upload_histological: "Upload Histological report"
+        btn_request: "Request Second Opinion"
+      show:
+        ai_score: Get AI Score
+        modal:
+          title: FotoFinder AI Score
+          out_of_credits: Out of credits
+          get_score: Get AI Score
+          credit_balance: Current credit balance
+          charged: You will be charged following amount
+          credits: Credit(s)
+          top_up: Please top up your credits or activate your free credit voucher in the Credits/Plan section.
+          credits_plan_link: Credits/Plan
+          disactivated: Sorry! This feature is disactivated for you
+      ai_score:
+        modal:
+          ai_score: AI Score
+          text_result: Results are based on statistics. A diagnosis is only to be made by the doctor
+      confirm:
+        confirm_second_opinion_exists:
+          title: "Second opinion exists for this image"
+          description: "There is already a second opinion or a pending second opinion request for this image! Please check your second opinion inbox! Do you want to request another second opinion on this image again?"
+          multiple_images_title: "Second Opinion exists for one or more of these images"
+          multiple_images_desc: "One or more images have already a second opinion or a pending second opinion request! Please check your second opinion inbox! Do you want to request another second opinion on the images again?"
+        delete_title: "Delete Image"
+        delete_confirm: "Are you sure you want to delete this image?"
+        btn_delete: "Delete"
+      header:
+        image: "Image %{count}"
+        of: "of %{count}"
+        title: "Session"
+        btn_overview: "Overview"
+        btn_previous: "Previous"
+        btn_next: "Next"
+        btn_delete: "Delete Image"
+      gallery:
+        title: "Other images in:"
+        image: "Image %{count}"
+        of: "of %{count}"
+    second_opinions:
+      invalid_so:
+        something_went_wrong: "Something Went Wrong"
+        request_failed: "Request Failed"
+        no_previous_so_found: "No Previous Second Opinion Found"
+      spinner_and_done:
+        new:
+          requesting: 'Requesting second opinion'
+          uploading: 'Uploading and securely transmitting your images and information...'
+          request_succesfull: 'Request successful'
+          processed: 'Your request has been processed and you will hear from an expert very soon.'
+      image_in_process: "Your images are still being processed but you will hear from the expert soon."
+      form:
+        previous_irragularities: "Have there been irregularities before?"
+        marker_info: Marker Info
+        write_marker: Write marker details
+        change: Change Group
+        previous: Previous
+        next: Next
+        img_details: Image Details
+        so_details: Second Opinion Details
+        send_request: "Send Request"
+        total_credit_html: "Total credit for this Second Opinion is <b> %{total} Credits</b>  which will be deducted from your Credit balance."
+        source: "Source"
+        date_and_time: "Date & Time"
+      index:
+        error_group: 'The second opinion service is temporarily not available for this group!'
+        patients: 'patients'
+        title: 'Second Opinion Service'
+        sex: 'Sex'
+        id: 'ID'
+        last_name: 'Last Name'
+        date_of_birth: 'Date of Birth'
+        first_name: 'First Name'
+        received_at: 'Received'
+        created_at: 'Requested'
+        info_line_1: "Internationally renowned skin cancer specialists provide you with the best available diagnostic quality."
+        info_line_2: "You will be notified by email once the rating is available. The report is automatically returned into your FotoFinder Hub"
+        info_line_3: "account and can be downloaded as PDF document."
+        inbox: "Inbox"
+        pending: "Pending"
+        count: "%{count}"
+        state: "State"
+        group_of_experts: "Group of Experts"
+        group_member: Member(s)
+        btn_view_group: "View Group"
+        btn_change_group: "Change Group"
+        credits_per_request: "%{amount} Credits / Second Opinion"
+      show:
+        other_images: "Start a multiple Image Request."
+        further_cost: "Further cost apply"
+        received_from: "Received %{date}, %{time} from %{from}"
+        title: "Second Opinion Service"
+        btn_overview: "Inbox Overview"
+        btn_download_pdf: "Print Report (PDF)"
+      pdf:
+        received_from: "Received %{date}, %{time} from %{from}"
+        rating_expert: "Rating expert for this picture:"
+      expert_group_member:
+        title: "Expert Group Members"
+        group_of_experts: "Group of Experts"
+        expert_group: "Expert Group"
+        credits: "Credits / Second Opinion"
+        member: "Member"
+        read_more: "read more"
+        specialities: "Specialities"
+        work_history: "Work History"
+        members_counter: "Member %{index} of %{counts}"
+      expert_group_list:
+        info_line4_html: Please select your <span class="font-semibold">Group of Experts</span> for using Our Service.
+        groups: Groups
+    linked_devices:
+      title: "Devices and Browsers"
+      listed_devices: "The devices and browsers you’re signed in to are listed below."
+      unfamiliar_devices: "If you see unfamiliar devices, click „Unlink“ and then change your password."
+      unfamiliar_devices_link: "If you see unfamiliar devices, click „Unlink“ from %{link} and then change your password."
+      my_devices: "My Devices"
+      index:
+        intro_bold: "These are the devices currently linked to FotoFinder Hub."
+        intro: "A device does only have access to this FotoFinder Hub account if the corresponding ,Authorize‘ checkbox is checked! You can revoke access for a device by unchecking the checkbox or by completely Unlinking the device."
+        linked_devices: 'Linked Devices'
+        last_activity: 'Last activity'
+        authorize: 'Authorize access'
+        sure: 'Are you sure you want to unlink this device?'
+        unlink: 'Unlink'
+        history: "History"
+        modal_unlink: "Unlink Device"
+        modal_cancel: "Cancel"
+        device_id: "Device ID:"
+      history:
+        title: "History of Linked Devices"
+        intro_bold: "These are the devices which were previously linked to FotoFinder Hub."
+        intro: "It shows the last action and its date/time of each device. If there are any suspicious activities for ‚Sign In‘ actions, you can revoke the access or unlink the device in %{link}."
+        device_id: "Device ID:"
+        datetime: "Date/Time"
+        sign_in: "Signed In"
+        sign_out: "Signed Out"
+        devices: "devices"
+    coupons:
+      create:
+        voucher_used: "Your voucher has been already used!"
+        voucher_activated: "Your voucher was successfully activated!"
+        voucher_wrong: "Your voucher activation code was wrong!"
+    dashboard:
+      index:
+        title: "Welcome Home, %{initial_name}"
+        search_bar_text1: "Search for Patient?"
+        search_bar_text2: "Please use the search bar to find the needed patients data."
+        search_bar_btn: "Search Patient"
+        patients_overview: "Patients Overview"
+        new_patient: "New Patient"
+        second_opinion: "Second Opinion"
+        credits_plan: "Credits / Plan"
+        search_bar_placeholder: "Please enter name, ID, birth date or email"
+      search_suggest:
+        search_bar_btn: "Search Patient"
+    invoice_past_due:
+      index:
+        text_line1: "You can currently not use the FotoFinder Hub, because your Stripe invoice <b>#%{number}</b> is past due since %{created}."
+        text_line2: "Please choose one of the following selections:"
+        pay_invoice: "Pay Invoice Now"
+        download_invoice: "Download Invoice PDF"
+        downgrade_trial: "Downgrade To Trial"
+        logout: "Logout"
+        confirm_title: "Downgrade subscription from %{plan_name} to Trial"
+        confirm_text: "After downgrade to Trial you must contact FotoFinder Systems to continue your %{plan_name} subscription."
+        downgrade: "Downgrade"
+        cancel: "Cancel"
+  group:
+    name: Name
+    region: Region
+    language: "Language"
+    slug: "Links"
+  credit_mutation:
+    payback: 'Payback for second opinion by %{from}, (%{image_count} insufficient images)'
+    reserve_credits: 'Credits reserved for pending second opinion'
+    transfered_to_system: 'Collected by system for payout'
+    ai_score: 'AI Score request with %{device}'
+    no_device_ai_score: 'AI Score request collected by system'
+    reserved: 'Reserved for second opinion'
+    transfered: "Second opinion by %{to} (%{image_count} images)"
+    transfer_purchase_to_user: "Credit purchase"
+    per_credit: "%{price} / credit"
+    buy_now: Buy now
+    hub_space: "Fotofinder Hub Space"
+    hub_space_capacity: "of %{capacity} Fotofinder Hub Space"
+    over_used_capacity: "%{over_used_capacity} Over Used"
+    credit_card_added: "Credit card successfully added, you can now choose a plan"
+    credit_card_added_mobile: "Credit card successfully added, you can now choose a plan or buy credits"
+    payment_not_processed: "Our payment processor could not process your card."
+  second_opinion:
+    not_enough_credits:
+      title: "Not enough credits"
+      description: "You have currently not enough credits in your account to request a second opinion. Your current request charges %{total} credits."
+    image:
+      diagnosis: "Diagnosis:"
+      differential_diagnosis: "Differential Diagnosis:"
+      suggestion: "Suggestion:"
+      comment: "Comment:"
+      empty: 'N/A'
+      insufficient_message: Image not sufficient for diagnosis
+    insufficient_explanation: '*If you mark an image as insufficient, comment is mandatory.'
+    medical_history: Medical history
+    pending:
+      status: Pending
+      expert: "N/A"
+    request: 'Request for Second Opinion'
+    marker_info: Marker Info
+    irragularity_options:
+      pos: 'Yes'
+      neg: 'No'
+      not_sure: 'Not Sure'
+    open: Open
+    locked: Locked
+    diagnosis:
+      angioma: Angioma
+      atypical_nevus: Atypical nevus
+      benign_nevus: Benign nevus
+      dermatofibroma_histiocytoma: Dermatofibroma
+      dysplastic_nevus: Dysplastic nevus
+      sebaceous_hyperplasia: Sebaceous hyperplasia
+      seborrhoic_ceratosis: Seborrhoic keratosis
+      solar_ceratosis: Actinic keratosis
+      solar_lentigo: Actinic lentigo
+      basal_cell_carcinoma: Basal cell carcinoma
+      invasive_melanoma: Invasive melanoma
+      superficial_melanoma: Superficial melanoma
+      melanoma_in_situ: Melanoma in situ
+      morbus_bowen: Morbus Bowen
+      squamous_cell_carcinoma: Squamous cell carcinoma
+      # These are obsolete
+      suspected_melanoma_in_situ: Suspected melanoma in situ
+      suspected_invasive_melanoma: suspected invasive melanoma
+      suspected_basal_cell_carcinoma: suspected basal cell carcinoma
+      suspected_solar_ceratosis: suspected solar ceratosis
+      suspected_morbus_bowen: suspected Morbus Bowen
+      suspected_squamous_cell_carcinoma: suspected squamous cell carcinoma
+    suggestions:
+      no_action: No action required
+      follow_up_in_3_months: Follow-up in 3 months
+      follow_up_in_6_months: Follow-up in 6 months
+      annual_follow_up: Annual follow-up
+      diagnostic_excision: Diagnostic excision
+      shave_biopsy: Shave biopsy
+      punch_biopsy: Punch biopsy
+      cryotherapy: Cryotherapy
+      tropical_treatment: Topical treatment
+      urgent_referral_to_dermatologist: Urgent referral to dermatologist
+      routine_referral_to_dermatologist: Routine referral to dermatologist
+      see_comment: See comment
+    pricing_validation:
+      not_enough_credits: not enough credits to use second opinion feature
+      eligible: user has the ability to use second opinion feature
+  expert:
+    second_opinions:
+      index:
+        title: Second Opinion Requests
+        from: from
+        image_count: '# of Images'
+        status: status
+        created_at: received at
+        requests: requests
+        credits: credits
+        error: 'This second opinion was just taken by someone else. Try a different one.'
+      edit:
+        comment: "Comment"
+        lightbox_enter_password: Please enter your password
+        lightbox_sign_report: "to sign your report:"
+        next: Next
+        of: of
+        prev: Previous
+        source_name: Device name
+      sent:
+        title: Second Opinion Sent
+        image_count: '# of Images'
+        sent_at: sent
+        requests: requests
+        to: to
+        finished: This second opinion is alredy closed, no edit is allowed!
+        credits: credits
+      show:
+        btn_download_pdf: "Print Report (PDF)"
+        other_images: Other Image(s) in this
+        request: Request
+      pdf:
+        received_from: "Received %{date}, %{time} from %{from}"
+        rating_expert: "Rating expert for this picture:"
+    credit_mutations:
+      index:
+        credit: "Credits"
+        current_balance: "Current Balance"
+        title: Credits
+  my_account:
+    header: My Account
+    edit:
+      delete_title: "If you want to delete your account completely follow the link"
+      pdf_headers: Edit PDF Report Headers
+      small_pdf_header: Customize your PDF Report headers
+    edit_header: Edit My Account
+    print_settings: Print settings
+    change_print_settings: Change print settings
+    edit_print_settings: Edit Print Settings
+    custom_pdf: Custom PDF Report Headers
+    remove_logo: Remove Logo
+    delete:
+      button: Delete Your Account
+      title: "Deleting Your Account"
+      password_confirmation_title: "Do you really want to delete it?"
+      confirm_1: "<strong>Caution: </strong> This function will delete your account and erase all data permanently. This process can not be restored at a later time!"
+      confirm_2: "<strong>Caution: </strong> This function will delete your account and erase all data permanently. This process can not be restored at a later time!"
+      confirm_3: "Are you sure to proceed? All data and images will be removed permanently!"
+      confirm_title: "Your account has been deleted"
+      support_message: "Your account has been deleted. All files and account data will be deleted shortly. If you want to cancel the deletion, please contact our customer service immediately. Once the deletion has been processed, it is no longer possible to restore the account."
+      contact_support: Contact Support
+      delete: Delete
+      confirm: Confirm
+      cancel: Go Back
+  expert_group_admin:
+    second_opinions:
+      index:
+        title: Second Opinion Requests
+        from: from
+        image_count: '# of Images'
+        status: status
+        created_at: received at
+        requests: requests
+        credits: credits
+      sent:
+        title: Second Opinion Requests
+        image_count: '# of Images'
+        sent_at: sent
+        requests: requests
+        to: to
+        credits: credits
+    credit_mutations:
+      index:
+        title: Credit Mutations
+        add_credits: "Mutate user credits"
+        amount_hint: "*Enter a negative value to subtract credits"
+        admin_insufficient_credits: "You do not have enough credits to perform this mutation"
+        user_insufficient_credits: "This user does not have enough credits"
+        credit_balance: "Your Current Balance: <strong>%{amount}</strong> credits"
+      overview:
+        title: Credit Mutations
+        sent_by: From
+        received_by: To
+        amount: Credits
+        csv: Download CSV
+        pdf: Export to PDF
+        comment: Comment
+        created_at: "Created on"
+    users:
+      index:
+        title: Users of group 
+        invite_user: Invite user
+        users: users
+      show:
+        title: User Details
+        users_overview: Group Users
+      detach:
+        title: User Detach
+        explanation: 'Detaching a user will remove all data related to the user, are you sure this user can be deleted?'
+        sure: 'I am sure, detach this user'
+        confirm: Are you sure?
+        users_overview: Group Users
+        success: 'User detached successfully!'
+      invite:
+        users_overview: Group Users
+        title: "Invite %{role}"
+      form:
+        information: Information
+  invitations:
+    index:
+      token_invalid: Invitation token is epxired, please contact admin to send a new one!
+      accept: Accept invitation
+      submit: Save
+      already_active: "This account is already active, try logging in with the password you have set"
+  api_registrations:
+    edit:
+      title: "Complete"
+      subtitle: "the FotoFinder Hub registration"
+      submit_text: "Complete Registration"
+  user_mailer:
+    welcome:
+      subject: "Welcome to the FotoFinder Hub!"
+    invitation:
+      subject: "Invitation for FotoFinder Hub"
+    api_welcome:
+      subject: "Welcome to the FotoFinder Hub!"
+    invited_to_clinic:
+      subject: "Welcome to the %{clinic}"
+    cancel_plan:
+      subject: "Invoice on Fotofinder Hub"
+    delete_reminder:
+      subject: "Fotofinder Hub account deletion reminder"
+  api_error:
+    no_api_key:
+      message: No api key found
+      suggestion: Contact FotoFinder
+    no_user:
+      message: No user found
+      suggestion:  Contact FotoFinder
+    unconfirmed:
+      message: This account is unconfirmed
+      suggestion: Please complete your registration
+      action_name: Complete your registration
+    unauthorized_device:
+      message:  This device is unauthorized
+      suggestion: Link this device on the Hub
+      action_name: Link device
+    disabled:
+      message: This account is disabled
+      suggestion: Contact FotoFinder
+  users:
+    mobile_show:
+      btn_choose_plan: "Choose your Plan"
+    identity_data:
+      title: "FotoFinder Indentity"
+      subtitle: "Account information and access"
+      info_text1: "This is the personal information you use to access and manage your account."
+      account_name: "Account name"
+      email: "Email"
+      role: Account Role
+      data_region: "Data Region"
+    password_data:
+      title: "Password and Security"
+      info_text: "To change your password, you’ll need to verify the current one first. Then create a password you’re not using elsewhere, and be sure to change it regularly as well as anytime you suspect it’s been compromised."
+    two_factor_authentication:
+      title: "Two Factor Authentication"
+      enabled: "Enabled"
+      disabled: "Disabled"
+      disable: "Disable"
+      enable: "Enable"
+      btn_title: "%{state} Two-Factor Authentication"
+      info_text: "Two-Factor Authentication (2FA) works by adding an additional layer of security to your account. It requires an additional login credential – beyond just the username and password – to gain account access, and getting that second credential requires access to something that belongs to you."
+    trigger_tfa:
+      wrong_token: "Wrong Verify Token!"
+  rcrs:
+    title: "Create Region Change Request"
+    ongoing_request: "You already have an ongoing request for region change."
+    track_progress: "Track your progress"
+    create:
+      request_successful: "Request have been successfully created, we will update the progress."
+    new:
+      select_region: "Select your region"
+      request: "Create Request"
+      current_region: "Current data region: %{region}"
+      select_other_region: "*You cannot select your own current data region, must select other regions"
+    show:
+      destination: "Destination"
+      status: "Current Status"
+      submitted_at: "Submitted At"
+      not_started: "Not started"
+      in_progress: "In progress"
+      done: "Done"
+  pages:
+    about:
+      title: "About"
+      about_text: "<b>FotoFinder hub</b> is a platform for storage and <b>second opinion</b> for handyscope users."
+      contact: "Contact:"
+      follow_instructions: "Follow instructions for use!"
+      open_link: "Open"
+      device_compliant: "The device complies with Medical Device Directive 93/43/EEC."
+      medical_device: "Medical device"
+  simple_form:
+    labels:
+      short_description: Short description
+      work_history: Work history
+      experience: Experiences
+      name: Name
+      email: Email Address
+      password: New Password
+      password_confirmation: Re-Type Password
+      current_password: Old Password
+      time_zone: Time zone
+      last_name: Last Name
+      first_name: First Name
+      middle_name: Middle Name
+      date_of_birth: Date of Birth
+      sex: Sex
+      company: Company / Practice
+      country: Country
+      street: Street Address
+      city: City
+      state: State
+      zip_code: Zip Code
+      patient_id: Patient ID
+      phone: Phone number
+      vat_nr: "VAT nr"
+      report_header_line_1: "Report Header Line 1"
+      report_header_line_2: "Report Header Line 2"
+      report_header_line_3: "Report Header Line 3"
+      report_header_line_4: "Report Header Line 4"
+      report_header_line_5: "Report Header Line 5"
+      logo: "Logo"
+  admin:
+    users:
+      stats: Stats
+      sign_up_date: Sign Up Date
+      last_sign_in_at: Last Sign In At
+      sign_in_count: Sign In Count
+      total_uploaded_images: Total Uploaded Images
+      total_images_size: Total Uploaded Images Size
+      admin_features: Admin features
+      audit: Audit log
+      impersonate: Impersonate user
+      confirm: Confirm user
+      reinvite: Resend invitation
+      to_confirm_message: Are you sure you want to confirm this user?
+      to_impersonate: Are you sure you want to impersonate this user? Be careful!
+      user_delete: Delete user
+      index:
+        title: "Users Overview"
+        csv: "CSV"
+        invite_ega: "Invite EGA"
+        invite_expert: "Invite Expert"
+        invite_doctor: "Invite Doctor"
+        inactive_users: "Inactive Users"
+        users: users
+        search: Search User
+      edit:
+        title: Edit User
+        csv: "CSV"
+        users_overview: Users Overview
+        invitation_sent: Invitation sent!
+      delete:
+        title: Delete User
+        users_overview: Users Overview
+        explanation: Deleting a user can have great complications for the integrity of the application, are you sure this user can be deleted? 
+        sure: I am sure, delete this user
+        confirm: Are you sure?
+      manage_access:
+        title: "Manage Access"
+        users_overview: "Users Overview"
+        user_access_status: "User Access Status"
+        is_account_locked: "Account locked"
+        last_ip: "Last attempt IP"
+        locked_at: "Locked at"
+        login_attempt: "Remaining attempts"
+        unlock_access: "Unlock Access"
+        reset_attempt: "Reset Attempt"
+        unlock_success: "User account is unlocked successfully."
+      plan_on_account:
+        title: Plan on account
+        users_overview: Users Overview
+        explanation: If you choose a plan here the Hub will assume the user is billed outside of the Hub. The user will keep this plan indefinitively.
+        plan_details: Plan Details
+        plan: Plan
+        exp_date: Expiration Date
+        is_stripe: Skip Stripe
+        manually_set_by: Subscription Manually Set By
+        stripe_id: Stripe Customer ID
+        status: Status
+        active_date: Active Until
+        eligible: Eligible for Free Trial
+        on_trial: On Trial
+        active: Active
+        not_active: Not active
+        cancel_at: Cancel at Period End
+        grace_date: Grace Period until
+        renew_date: Ready to Renew since
+        currency: Currency
+        is_daily: Daily Subscription
+        is_annual: Annual Subscription
+        lifetime_sub: Lifetime Subscription
+        in_grace_period: In Grace Period
+        ready_to_renew: Ready to Renew
+        coupon: Coupon
+        payment_display: Payment Account Display
+        payment_display_file: Payment Account File
+        history: "History"
+        replace_subscription: "Replace Subscription"
+        general_information: "General Information"
+        dates: "Dates"
+        additional_information: "Additional Information"
+        misc_information: "Miscellaneous Information"
+        stripe_info: "Stripe Customer Information"
+        currency_not_available: "*Card not connected"
+        plan_on_account_info: "*Either account not activated or not eligible for plan on account"
+        no_subscription_plan: "No Subscription Plan on the Account"
+      invite:
+        title: "Invite %{role}"
+        users_overview: "Users Overview"
+        information: Information
+        group: Group
+      inactive_users:
+        title: "Inactive Users"
+        download: "Download"
+        remove: "Remove"
+        users_overview: "Users Overview"
+        first_name: First Name
+        last_name: Last Name
+        last_sign_in_at: Last activity
+        email: Email
+        total_image_count: Patient Image(s)
+        users: users
+      confirm_delete_inactive_users:
+        title: Confirm Delete Users
+        inactive_users_overview: Inactive Users
+        explanation: Deleting the inactive user(s) can have great complications for the integrity of the application, are you sure the user(s) can be deleted?
+        sure: I am sure, delete the user(s)
+      confirm_download_inactive_users:
+        sure: Download Inactive Users as CSV File
+        explanation: Download all Inactive Users
+        title: Download Inactive Users
+        inactive_users_overview: Inactive Users
+      confirm_download:
+        title: Download User
+        users_overview: Users Overview
+        user_edit: Edit User
+        user_credit_mutations: Credit mutations
+        user_plan_on_account: Plan on account
+        user_delete: Delete user
+        explanation: Downloading the user data must be under his permission and only with his demand 
+        sure: Download
+      search_suggest:
+        email: Email
+    subscription_histories:
+      index:
+        plan_account: "Plan on Account"
+        sub_list: "Subscription List"
+        subscription: "Subscription"
+        currency: "Currency"
+        stripe_id: "Stripe ID"
+        created_at: "Created At"
+        action: "Action"
+        list_explain: "This list contains subscriptions which the user used previously. You can replace current subscription from subscription in the list."
+      new:
+        replace_sub: "Replace Subscription"
+        replace_sub_explain: "This would replace user's current subscription. User <b>must</b> re-enter payment information."
+        plan: "Plan"
+        currency: "Currency"
+        skip_stripe: "Skip Stripe"
+        current_sub: "Current Subscription"
+        current_sub_legend: "(Plan - Currency - Skip Stripe)"
+      subscription_history:
+        use: "Use"
+    group_experts:
+      index:
+        title: "Clinics Overview"
+        add_group: "New Clinic"
+        groups: groups
+        requirements_explain_html: "*Clinic must contain at least 1 admin <b>and</b> 1 expert, invalid clinic is marked red."
+      new:
+        title: "New Expert Group"
+        group_overview: "Expert Groups Overview"
+      edit:
+        title: "Edit Expert Group"
+        group_overview: "Expert Groups Overview"
+      show:
+        title: "Clinic Details"
+        group_overview: "Clinics Overview"
+        users: users
+        delete_confirm: Are you sure you want to delete this group?
+      form:
+        global_access_explain: "*If enabled, doctors can choose other global valid groups (at least 1 expert + 1 admin) during second opinion creation."
+        ai_score_explain: "*Allow all doctors in the group to use AI Score feature. No credits limit for private group."
+        private_group_explain: "*If enabled, no limit in image upload and ai score credits for doctors who connect to private group."
+        hidden_group_explain: "*If enabled, group will not show in the group selection list for second opinion, except for the doctors in this group. This takes precendence over global access."
+    group_photofinders:
+      index:
+        title: "FotoFinder Groups Overview"
+        add_group: "New FotoFinder Group"
+        groups: groups
+      new:
+        title: "New FotoFinder Group"
+        group_overview: "FotoFinder Groups Overview"
+      edit:
+        title: Edit FotoFinder Group
+        group_overview: FotoFinder Groups Overview
+      show:
+        title: "Group Details"
+        group_overview: "FotoFinder Groups Overview"
+        users: "users"
+        delete_confirm: Are you sure you want to delete this group?
+    groups:
+      private_group: Private Group
+      regional_details: Regional details
+      settings: Settings
+      select_expert_group: Expert groups
+      assigned_photofinder_groups: Assigned FotoFinder Groups
+      group_name: Name
+      group_region: Region
+      group_language: Language
+      max_space: Max Space
+      group_users_length: Number of Users
+      group_doctors_length: Number of Doctors
+      group_experts_length: Number of Experts
+      group_access: Global Access
+      index:
+        edit_group: Edit clinic
+        delete_group: Delete clinic
+      users:
+        first_name: First Name
+        last_name: Last Name
+        dob: Date of birth
+        country: Country
+        credits: Credits
+        last_sign_in_at: Last activity
+        role: Role
+    credit_mutations:
+      index:
+        add_credits: "Mutate user credits"
+        title: "Credit mutations"
+        amount_hint: "*Enter a negative value to subtract credits"
+        users_overview: Users Overview
+      overview:
+        title: "Credit Mutations Overview"
+    pages:
+      index:
+        title: 'Pages Overview'
+        new_page: 'New page'
+        created_at: 'Created at'
+        language: "Language"
+        category: "Category"
+      new:
+        title: New page
+        pages_overview: "Pages Overview"
+      edit:
+        title: Edit page
+        pages_overview: "Pages Overview"
+      delete:
+        title: Delete page
+        explanation: 'Are you sure you want to delete this page?'
+        pages_overview: "Pages Overview"
+        confirm: 'Are you sure?'
+        sure: 'I am sure, delete this page'
+    settings:
+      edit:
+        title: "Application Settings"
+        disabled: Disabled
+        enabled: Enabled
+        credits: Credits
+        features: Features -
+        active: Active
+        inactive: Inactive
+        bg_job_status: Background Job - Status
+        usr: USER
+        pid: PID
+        stat: STATE
+        tm: TIME
+        cmd: COMMAND
+        start: Start
+        stop: Stop
+        success_start: Successfully started the background job.
+        success_stop: Successfully stopped the background job.
+        already_start: BG Job already started!
+        no_bg_job: No active BG Job!
+        size_limit: Image Sizes limitations
+        size_limit_explain: "*If it is enabled, that means users are limited by the image sizes calculation. Otherwise, users are limited by the number of images stored."
+        so_v2: Second Opinion V2
+        so_v2_explain: "*If it is enabled, doctors can change expert group during second opinion creation."
+        fsize: Image Object 'fsize' Attributes
+        fsize_explain: "*Enable calculation of user total images file size based on image object's fsize attribute"
+        rcr: "Region Change Request"
+        rcr_explain: "*If enabled user can use custom bucket based on chosen region"
+        enterprise: "Enterprise Plan"
+        enterprise_explain: "*If enabled user can subscribe to enterprise plan in Credit and Mutations page"
+        migration_progress: "Migration Progress: "
+        progress: "Progress: "
+        confirm: "Confirm"
+        refresh: "Refresh"
+        remaining_migrated_images: "Remaining image(s) to be migrated:"
+        migration_in_progress: "Running BG job for %{image_count} image(s) is in progress..."
+        storage_price: "Price per GB"
+        default_clinic: "Default clinic"
+        clinic: "Clinic"
+        pay_per_use: "Pay per Use"
+        pay_per_use_explain: "*If enabled, user will be charged additionally per storage use if storage usage goes over the plan"
+      image:
+        current_image: "(%{cur_count} of %{count}) Image %{id}: %{fsize} bytes"
+        last_update: "%{last_image} (Last update: %{datetime})"
+    admin:
+      index:
+        title: "My Account"
+        qr_title: "%{state} Two-Factor Authentication"
+        disable: "Disable"
+        enable: "Enable"
+        verify_token: "Verify Token:"
+        insert_token: "Insert Token"
+        recovery_code: "Your recovery code:"
+        recovery_code_message: "Please store the recovery code in a safe and memorable location."
+    history_trackings:
+      index:
+        title: "Audit Log"
+        type: Type
+        action: Action
+        version: Version
+        changes_count: Changes
+        modifier: User
+        created_at: Created At
+        trackings: trackings
+      show:
+        meta_data: "Meta data"
+        changes: "Changes"
+        changed_object: "Changed item"
+        type: "Type"
+        action: "Action"
+        version: "Version"
+        changes_count: "Changes"
+        modifier: "User"
+        created_at: "Created at"
+        original: "Original"
+        modified: "Modified"
+    rcrs:
+      index:
+        title: "Region Change Requests Overview"
+        rcrs: "Region Change Requests"
+      show:
+        title: "Region Change Request"
+        start_migration: "Start Migration"
+        finish_migration: "Delete Images from Old Region"
+        retry_rcr: "Retry Migration"
+        migration_status: "Migration Status"
+        errors: "Errors for Migration"
+        logs: "Logs"
+        migration_in_progress: "Migration is Running"
+        delete_in_progress: "Deletion is in Progress"
+        migration_start_by: "Migration Started By"
+    log:
+      show:
+        back_rcr: "Back to RCR"
+        log_creation: "Created at: %{time}"
+        delete_log: "Delete Log"
