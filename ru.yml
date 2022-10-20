@@ -30,14 +30,14 @@ ru:
   time:
     in_words:
       today: 'cheking in russian'
-      yesterday: ''
+      yesterday: 'Russian Yesterday'
     formats:
       short: ""
       time_only: ""
       long: ""
       invoice: ""
     am: ""
-    pm: ""
+    pm: "Russian PM"
   date:
     formats:
       default: ""
