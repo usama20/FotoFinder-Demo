@@ -26,18 +26,18 @@ ru:
         delimiter: ""
         precision: 0
         significant: ""
-        strip_insignificant_zeros: ""
+        strip_insignificant_zeros: Russain False
   time:
     in_words:
       today: 'cheking in russian'
-      yesterday: ''
+      yesterday: 'Russian Yesterday'
     formats:
       short: ""
       time_only: ""
       long: ""
       invoice: ""
     am: ""
-    pm: ""
+    pm: "Russian PM"
   date:
     formats:
       default: ""
